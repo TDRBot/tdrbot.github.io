@@ -69,7 +69,7 @@ a:active {
 <div>my epic website is so fortnite battle pass</div>
     <br>
     <h4>ADVERTISEMENT</h4>
-    <a href="/old-site"><img src="https://tdrbot.github.io/images/OldSiteAD.png"></a>
+  <a href="/old-site" id="link1"><img src="images/OldSiteAD.png" id="site"></a>
   <br>
   <br>
   <br> 
@@ -225,5 +225,21 @@ a:active {
     <br>
     <a href="#top" id="uh">hey uh, go back up.</a>
 </center>
+    <script>
+      var arr = ["/old-site", "https://youtube.com/@tdrrp"];
+      var img = ["images/OldSiteAD.png", "images/YTad.png"]
+var i=0;
+
+function slide(){
+    document.getElementById("link1").href= arr[i];
+    document.getElementById("site").src = img[i];
+    i++;
+    if(i==arr.length){
+        i=0;
+    }
+}
+
+setInterval(slide, 2000);
+    </script>
 </body>
 </html>
