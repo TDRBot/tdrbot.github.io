@@ -1,0 +1,92 @@
+<html lang="en-US"><head>
+  <title>TDRP's COOL website</title>
+        <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta content="This is TDRP's COOL website login page." property="og:title">
+<meta content="It's so fortnite battle pass" property="og:description">
+<meta content="https://tdrbot.github.io" property="og:url">
+<meta content="https://tdrbot.github.io/images/TDRPicon.png" property="og:image">
+<meta content="#00ff00" data-react-helmet="true" name="theme-color">
+  </head>
+  <body style="background-image: url('images/background.png');">
+<style>
+a:link {
+  color: #00ff00;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00ff00;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style> 
+    <style>
+      body {
+        color: white;
+        font-family: DotGothic16;
+      }
+      table, tr, th, td {
+        border: 3px solid white;
+        background-color:black;
+        font-family: Determination;
+        width: 626
+      }
+      @font-face {
+    font-family: Determination;
+    src: url(font8bitoper.ttf);
+}
+      :root {
+        scroll-behavior: smooth
+      }
+      code {
+        font-family: Determination;
+      }
+      small {
+        font-family: DotGothic16;
+      }
+
+      .hidden {
+        color: #1a1a1a;
+      }
+    </style>
+    <a href="https://tdrbot.github.io">Return to homepage.</a>
+    <hr>
+    <center>
+      <br>
+      <h1>Account Login</h1>
+      <br>
+      <p class="hidden">except i haven't figured out how to do logging in yet..</p>
+      <br>
+      <br>
+      <input type="text" placeholder="Username">
+      <br>
+      <br>
+      <br>
+      <input type="password" placeholder="Password">
+      <br>
+      <br>
+      <p style="display: none; color:red;">Couldn't login. (Server Unavaliable)</p>
+      <br>
+      <br>
+      <button onclick="fail()" style="color: white;background-color: black;">Login</button>
+    </center>
+    <script>
+  function fail() {
+  document.getElementById("error").style.display = "block";
+  }
+    </script></body></html>
