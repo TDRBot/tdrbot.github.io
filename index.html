@@ -89,7 +89,10 @@ a:active {
     <br>
     <br>
     <br>
-        <table>
+    <select>
+      <option onclick="pg1">Page 1</option>
+    </select>
+    <table id="1">
       <tbody>
         <tr>
           <th>
@@ -249,6 +252,11 @@ function slide(){
 }
 
 setInterval(slide, 2000);
+    </script>
+    <script>
+  function pg1() {
+  document.getElementById("1").style.display = "block";
+  }
     </script>
 </body>
 </html>
