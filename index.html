@@ -63,6 +63,9 @@ a:active {
       .arial {
         font-family: Arial
       }
+      .hide {
+        display: none;
+      }
     </style>
     <div style="text-align: left">Website Update: the "account faq" update</div>
   <center>
@@ -89,10 +92,7 @@ a:active {
     <br>
     <br>
     <br>
-    <select>
-      <option onclick="pg1">Page 1</option>
-    </select>
-    <table id="1">
+    <table>
       <tbody>
         <tr>
           <th>
@@ -143,11 +143,14 @@ a:active {
     <br>
     <br>
     <br>
-    <table>
+    <select>
+      <option onclick="pg1">Page 1</option>
+    </select>
+    <table id="1">
       <tbody>
         <tr>
           <th>
-            Guest Book!!
+            Guest Book!! Page 1
           </th>
         </tr>
         <tr>
@@ -172,6 +175,23 @@ a:active {
             <br>
             <br>
             Hello there users of TDRP's website, did you know that I helped with some portions of his website, such as the registered users page. Anyways gonna proceed with helping him on his Roblox game.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="2" class="hide">
+      <tbody>
+        <tr>
+          <th>
+            Guest Book!! Page 2
+          </th>
+        </tr>
+        <tr>
+          <td>
+            TDRP 6:39 AM 5/18/2024
+            <br>
+            <br>
+            hai! im on the second page!! kewl.
           </td>
         </tr>
       </tbody>
@@ -256,6 +276,11 @@ setInterval(slide, 2000);
     <script>
   function pg1() {
   document.getElementById("1").style.display = "block";
+  document.getElementById("2").style.display = "none";
+  }
+  function pg2() {
+  document.getElementById("1").style.display = "none";
+  document.getElementById("2").style.display = "block";
   }
     </script>
 </body>
