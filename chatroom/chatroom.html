@@ -78,6 +78,35 @@ a:active {
       <em>PS: There is no chat filter. Keep it clean.</em>
       <br>
       <br>
+      <p id="counter">Users online: <span id="userCount">loading…</span></p>
+      <br>
+      <br>
       <br>
       <iframe src="TDRChat.html" width="1280" height="720">
+
     </center>
+<script type="text/javascript" charset="utf-8">
+$().ready(function (){
+  var token = '';
+  var pinger = setInterval(function (){
+    
+    $.ajax({
+      cache: false,
+      data: {
+        token: token,
+      },
+      timeout: 2500,
+      type: 'GET',
+      url: 'pinger.php',
+      dataType: 'json',
+      success: function (data, status, jqXHR){
+        $('#userCount').text(data.userCount);
+        token = data.token;
+      }
+    });
+    
+  }, 5000);
+});
+</script>
+  </body>
+</html>
