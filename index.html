@@ -71,9 +71,8 @@ a:active {
 }
       .message{
 	position: fixed;
-	bottom: -250px;
+	bottom: -200px;
 	right: 0;
-	cursor:url(/chatroom/favicon2.ico), pointer;
 	-webkit-animation-name: popup; /* Safari 4.0 - 8.0 */
 	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
 	animation-name: popup;
@@ -82,9 +81,12 @@ a:active {
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
 }
+	    .chatcursor {
+	cursor:url(/chatroom/favicon2.ico), pointer;
+	    }
     </style>
     <div style="text-align: left">Website Update: the "chatroom" update</div>
-    <a href="/chatroom/chatroom.html" class="message"><img src="images/message.png"></a>
+    <a href="/chatroom/chatroom.html" class="message"><img class="chatcursor" src="images/message.png"></a>
   <center>
   <h1 id="header">Welcome to my COOL website</h1>
     <em><h3>it's like you just time traveled to a website from 2009..</h3></em>
