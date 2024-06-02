@@ -91,7 +91,7 @@ option {
 input {
   cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
 }
-.rainbow-glow
+.rainbow-glow {
   filter:blur(15px);
   background:linear-gradient(90deg,red,#ff4500,orange,gold,#ff0,#adff2f,green,#20b2aa,#0ff,#00f,indigo,#8a2be2,#9400d3,#c71585,#ff1493);
   background-size:200% 200%;
