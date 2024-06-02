@@ -91,6 +91,9 @@ option {
 input {
   cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
 }
+.update {
+  cursor:url("https://tdrbot.github.io/cursors/Update.png"), default;
+}
 .rainbow-glow {
   position:relative;
   z-index:2
