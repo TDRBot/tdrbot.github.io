@@ -92,6 +92,19 @@ input {
   cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
 }
 .rainbow-glow {
+  position:relative;
+  z-index:2
+}
+.rainbow-glow:before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:100%;
+  width:100%;
+  z-index:-1;
+  transform:scale(1) translateZ(0);
   filter:blur(15px);
   background:linear-gradient(90deg,red,#ff4500,orange,gold,#ff0,#adff2f,green,#20b2aa,#0ff,#00f,indigo,#8a2be2,#9400d3,#c71585,#ff1493);
   background-size:200% 200%;
