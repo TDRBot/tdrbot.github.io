@@ -88,3 +88,31 @@ button {
 option {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
+input {
+  cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
+}
+.rainbow-glow
+  filter:blur(15px);
+  background:linear-gradient(90deg,red,#ff4500,orange,gold,#ff0,#adff2f,green,#20b2aa,#0ff,#00f,indigo,#8a2be2,#9400d3,#c71585,#ff1493);
+  background-size:200% 200%;
+  animation:animateGlow 5.25s linear infinite
+}
+.rainbow-glow:hover:before {
+  filter:blur(15px) brightness(2.2)
+}
+@keyframes animateGlow {
+  0% {
+    background-position:200% 50%
+  }
+  to {
+    background-position:0 50%
+  }
+}
+@keyframes animateGlow-bottom {
+  0% {
+    background-position:0 200%
+  }
+  to {
+    background-position:50% 0
+  }
+}
