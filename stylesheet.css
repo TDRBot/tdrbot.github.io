@@ -82,3 +82,9 @@ a {
  html {
    cursor:url("https://tdrbot.github.io/cursors/Default.png"), default;
  }
+button {
+  cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+}
+option {
+  cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+}
