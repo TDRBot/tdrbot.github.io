@@ -140,7 +140,7 @@ input {
   cursor:url("https://tdrbot.github.io/cursors/User.png"), default;
      }
       .sociallink:active {
-	      filter: brightness(70%)
+	      filter: brightness(50%)
       }
                  .loader {
 		      animation: 3s Rotate;
