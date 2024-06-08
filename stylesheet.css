@@ -139,3 +139,22 @@ input {
      .profile {
   cursor:url("https://tdrbot.github.io/cursors/User.png"), default;
      }
+      .sociallink:active {
+	      filter: brightness(70%)
+      }
+                 .loader {
+		      animation: 3s Rotate;
+		      animation-duration: 3s;
+		      animation-name: Rotate;
+		      animation-timing-function: cubic-bezier(.65,.05,.36,1);
+		      animation-delay: 1s;
+		      animation-iteration-count: infinite;
+		 }
+@keyframes Rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+}
+}
