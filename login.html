@@ -81,7 +81,7 @@ a:active {
       <input type="password" placeholder="Password">
       <br>
       <br>
-      <img src="icons/Load.png" class="loader" id="load" style="width:40; height:40;">
+      <img src="icons/Load.png" class="loader" id="load" style="width:40; height:40; display:none;">
       <p style="display: none; color:red;" id="error">Couldn't login. (Server Unavaliable)</p>
       <br>
       <br>
@@ -90,7 +90,7 @@ a:active {
     <script>
   function fail() {
       document.getElementById("load").style.display = "flex";
-    await sleep(10000); // Wait 10 seconds i think lol.
+    await delay(10000); // Wait 10 seconds i think lol.
   document.getElementById("error").style.display = "flex";
       document.getElementById("load").style.display = "none";
   }
