@@ -88,6 +88,10 @@ a {
  }
 button {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+  border: solid 3px white;
+  background-color: black;
+  color: White;
+  font-family: DotGothic16;
 }
 option {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
