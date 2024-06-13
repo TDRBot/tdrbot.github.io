@@ -94,7 +94,8 @@ button {
   font-family: DotGothic16;
 }
 button:hover {
-  animation: cool, 2s, infinite, cubic-bezier(.55,.09,.68,.53)
+  animation: cool, 2s, infinite, cubic-bezier(.55,.09,.68,.53);
+	position: relative;
 }
 option {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
@@ -167,11 +168,11 @@ input {
 }
 @keyframes cool {
 	0% {
-		right: -3
+		right: -6
 	}
 	50% {
-		right: 3
+		right: 6
 	}
 	100% {
-		right: -3
+		right: -6
 	}
