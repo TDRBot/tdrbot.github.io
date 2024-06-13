@@ -93,6 +93,9 @@ button {
   color: White;
   font-family: DotGothic16;
 }
+button:hover {
+  animation: cool, 2s, infinite, cubic-bezier(.55,.09,.68,.53)
+}
 option {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
@@ -162,3 +165,13 @@ input {
 		transform: rotate(359deg);
 }
 }
+@keyframes cool {
+	0% {
+		right: -3
+	}
+	50% {
+		right: 3
+	}
+	100% {
+		right: -3
+	}
