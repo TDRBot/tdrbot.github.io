@@ -36,6 +36,10 @@ a:active {
     src: url("https://tdrbot.github.io/fonts/font8bitoper.ttf");
 }
       @font-face {
+    font-family: DOS Font;
+    src: url("https://tdrbot.github.io/fonts/DOSFont.ttf");
+}
+      @font-face {
     font-family: ProgressPixel;
     src: url("https://tdrbot.github.io/fonts/ProgressPixel.ttf");
 }
