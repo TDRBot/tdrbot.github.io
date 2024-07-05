@@ -88,12 +88,24 @@ a:active {
         scroll-behavior: smooth
       }
     </style>
-    <div style="background-color:black;color:white;border: solid 5px white; padding: 4px; max-width:400; max-height: 400; width: 400; height:600; position:fixed;right: 500;bottom: 100; display:none; border-radius:25px;text-align:center;" id="socialLinks">
+<div style="background-color: black; color: white; border: 5px solid white; padding: 4px; max-width: 400px; max-height: 400px; width: 400px; height: 600px; position: fixed; right: 500px; bottom: 100px; display: none; border-radius: 25px;overflow-y: scroll;" id="socialLinks">
   <h3>Social Links</h3>
-      <br>
-          <div>
-      <a href="https://youtube.com/@tdrrp" target="_blank"><img src="https://tdrbot.github.io/images/buttons/YTButton.png" class="sociallink"></a></div>
-  </div>
+<button style="position:relative;max-height: 40;max-width: 40;left: 240;width: 40;" onclick="closesocial()">X</button>
+          <br>
+          <br>
+  <pre style="position:relative;left:-120;">
+
+
+
+    
+<a href="https://youtube.com/@tdrrp" target="_blank"><img src="https://tdrbot.github.io/images/buttons/YTButton.png" class="sociallink"></a>
+<a href="https://open.spotify.com/artist/3K8dj1j1TVIs0AGTQ24Dng" target="_blank"><img src="https://tdrbot.github.io/images/buttons/SpotifyButton.png" class="sociallink"></a> 
+<a href="https://www.deviantart.com/tdrp" target="_blank"><img src="https://tdrbot.github.io/images/buttons/DeviantButton.png" class="sociallink"></a> 
+<a href="https://www.roblox.com/users/3366452605/profile" target="_blank"><img src="https://tdrbot.github.io/images/buttons/RobloxButton.png" class="sociallink"></a> 
+<a href="https://github.com/TDRBot" target="_blank"><img src="https://tdrbot.github.io/images/buttons/GitButton.png" class="sociallink"></a> 
+<a href="https://bandlab.com/catsyboi" target="_blank"><img src="https://tdrbot.github.io/images/buttons/BandlabButton.png" class="sociallink"></a> 
+</pre>
+</div>
     <wrapper id="wrapper">
     <a href="https://tdrbot.github.io/accounts.html">Back to registered users.</a>
     <hr>
@@ -126,12 +138,12 @@ a:active {
       </wrapper>
     <script>
   function opensocial() {
-  document.getElementById("socialLinks").style.display = "flex";
+  document.getElementById("socialLinks").style.display = "grid";
   document.getElementById("wrapper").style.filter = "blur(5px)";
   }
   function closesocial() {
   document.getElementById("socialLinks").style.display = "none";
-  document.getElementById("wrapper").style.display = "blur(0px)";
+  document.getElementById("wrapper").style.filter = "blur(0px)";
   }
     </script>
     </body>
