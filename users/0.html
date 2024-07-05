@@ -88,6 +88,13 @@ a:active {
         scroll-behavior: smooth
       }
     </style>
+    <div style="background-color:black;color:white;border: solid 5px white; padding: 4px; max-width:400; max-height: 400; width: 400; height:600; position:fixed;right: 500;bottom: 100; display:none; border-radius:25px;text-align:center;" class="socialLinks">
+  <h3>Social Links</h3>
+      <br>
+          <div>
+      <a href="https://youtube.com/@tdrrp" target="_blank"><img src="https://tdrbot.github.io/images/buttons/YTButton.png" class="sociallink"></a></div>
+  </div>
+    <wrapper class="wrapper">
     <a href="https://tdrbot.github.io/accounts.html">Back to registered users.</a>
     <hr>
     <h1>TDRP</h1>
@@ -115,8 +122,17 @@ a:active {
     <br>
     <br>
     <br>
-    <p>Social Links</p>
-    <div style="display: inline-block;">
-      <a href="https://youtube.com/@tdrrp" target="_blank"><img src="https://tdrbot.github.io/images/buttons/YTButton.png" class="sociallink"></a>
-  </body>
+    <button onclick="opensocial()">Open Social Links</button>
+      </wrapper>
+    <script>
+  function opensocial() {
+  document.getElementByClass("socialLinks").style.display = "flex";
+  document.getElementByClass("wrapper").style.filter = "blur(5px)";
+  }
+  function closesocial() {
+  document.getElementByClass("socialLinks").style.display = "none";
+  document.getElementByClass("wrapper").style.display = "blur(0px)";
+  }
+    </script>
+    </body>
 </html>
