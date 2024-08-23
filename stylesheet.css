@@ -26,7 +26,7 @@ a:active {
         font-family: DotGothic16;
       }
 
-     body::selection  {
+     body ::selection  {
 	     color: black;
 	     background: #00ff00;
      }
