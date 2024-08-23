@@ -25,6 +25,11 @@ a:active {
         color: white;
         font-family: DotGothic16;
       }
+
+     body::selection  {
+	     color: black;
+	     background: #00ff00;
+     }
       table, tr, th, td {
         border: 3px solid white;
         background-color:black;
