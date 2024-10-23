@@ -27,6 +27,15 @@ a:active {
         background-image: url('https://tdrbot.github.io/images/SiteBG.png');
       }
 
+      .container {
+        background-color: darkslategrey;
+        border:solid 5px white;
+        border-radius: 5px;
+        text-align:center;
+        width:50%;
+        max-width:50%
+      }
+
      body ::selection  {
 	     color: black;
 	     background: #00ff00;
