@@ -28,15 +28,12 @@ a:active {
       }
 
       .container {
-        background-color: #07091a;
+        background-color: #091a07;
         border:solid 5px white;
         border-radius: 5px;
         text-align:center;
         width:50%;
         max-width:50%
-      }
-      .image-container {
-        border:solid 5px white;
       }
 
      body ::selection  {
