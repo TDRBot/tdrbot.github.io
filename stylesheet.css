@@ -24,7 +24,7 @@ a:active {
       body {
         color: white;
         font-family: DotGothic16;
-        background-image: url('https://tdrbot.github.io/images/SiteBG.png'), black;
+        background-image: url('https://tdrbot.github.io/images/SiteBG.png');
       }
 
      body ::selection  {
@@ -71,7 +71,7 @@ a:active {
 	cursor:url(/chatroom/favicon2.ico), pointer;
       }
 	    *{
-	image-rendering: crisp-edges;
+	image-rendering: pixelated;
 }
 
 .message {
