@@ -33,7 +33,8 @@ a:active {
         border-radius: 5px;
         text-align:center;
         width:50%;
-        max-width:50%
+        max-width:50%;
+        padding: 10px;
       }
 
      body ::selection  {
