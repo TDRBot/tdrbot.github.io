@@ -65,40 +65,12 @@ a:active {
       code {
         font-family: Determination;
       }
-      small {
-        font-family: DotGothic16;
-      }
-      .arial {
-        font-family: Arial
-      }
-      .hide {
-        display: none;
-      }
-      .discordEmbed {
-    float: right;
-}
-	    .chatcursor {
-	cursor:url(/chatroom/favicon2.ico), pointer;
-      }
-	    *{
+	img {
 	image-rendering: pixelated;
 }
-
-.message {
-        animation: 10s slide-up;
-        margin-top: 0%;
-	position: fixed;
-	bottom: 0px;
-	right: 0;
-}
-
-@keyframes slide-up {
-  from {
-  bottom: -250px;
-  }
-  to {
-  bottom: 0px;
-  }
+.nav-btn {
+	width: 10%;
+	height: 70px;
 }
 a {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
@@ -108,23 +80,20 @@ a {
  }
 button {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
-  border: solid 3px white;
+  border: solid 3px orange;
   background-color: black;
-  color: White;
-  font-family: DotGothic16;
+  color: orange;
+  font-family: Determination;
 }
 button:hover {
-  animation: cool, 2s, infinite, cubic-bezier(.55,.09,.68,.53);
-	position: relative;
+	border: solid 3px yellow;
+	color: yellow;
 }
 option {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
 input {
   cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
-}
-.update {
-  cursor:url("https://tdrbot.github.io/cursors/Update.png"), default;
 }
 .rainbow-glow {
   position:relative;
@@ -164,20 +133,6 @@ input {
     background-position:50% 0
   }
 }
-     .profile {
-  cursor:url("https://tdrbot.github.io/cursors/User.png"), default;
-     }
-      .sociallink:active {
-	      filter: brightness(50%)
-      }
-                 .loader {
-		      animation: 3s Rotate;
-		      animation-duration: 3s;
-		      animation-name: Rotate;
-		      animation-timing-function: cubic-bezier(.65,.05,.36,1);
-		      animation-delay: 1s;
-		      animation-iteration-count: infinite;
-		 }
 @keyframes Rotate {
 	from {
 		transform: rotate(0deg);
@@ -185,15 +140,4 @@ input {
 	to {
 		transform: rotate(359deg);
 }
-}
-@keyframes cool {
-	0% {
-		right: -6
-	}
-	50% {
-		right: 6
-	}
-	100% {
-		right: -6
-	}
 }
