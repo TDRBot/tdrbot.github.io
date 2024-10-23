@@ -24,6 +24,7 @@ a:active {
       body {
         color: white;
         font-family: DotGothic16;
+        background-image: url('https://tdrbot.github.io/images/SiteBG.png'), black;
       }
 
      body ::selection  {
