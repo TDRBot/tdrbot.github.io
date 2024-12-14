@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i don't know</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 6rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: glitch 1.5s infinite;
+            font-weight: bold;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: -2px 0 red, 2px 0 blue;
+                transform: skew(-2deg);
+            }
+            25% {
+                text-shadow: -3px 0 green, 3px 0 purple;
+                transform: skew(3deg);
+            }
+            50% {
+                text-shadow: -5px 0 orange, 5px 0 yellow;
+                transform: skew(-4deg);
+            }
+            75% {
+                text-shadow: -2px 0 red, 2px 0 blue;
+                transform: skew(2deg);
+            }
+            100% {
+                text-shadow: 3px 0 pink, -3px 0 cyan;
+                transform: skew(0deg);
+            }
+        }
+
+        .sound-wave {
+            position: absolute;
+            bottom: -20px;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+            animation: wave 1s infinite alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>i dunno</h1>
+        <div class="sound-wave"></div>
+    </div>
+</body>
+</html>
