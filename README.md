@@ -1,2 +1,2 @@
-<h1>Howdy- Wait..</h1>
-<p>Why are you even here? I mean like, why? Just leave and take my code beach.</p>
+<h1>hi, i dunno what to put here now.</h1>
+<p>uhhh yeah so uh i ate cereal this morning and watched some youtube on my phone because i was bored. okay, bye.</p>
