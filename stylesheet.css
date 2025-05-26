@@ -157,3 +157,7 @@ input {
 .topbar a:link {
   color:orange;
 }
+
+.topbar a {
+  width: 100%
+}
