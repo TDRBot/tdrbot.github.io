@@ -59,6 +59,10 @@ a:active {
     font-family: ProgressPixel;
     src: url("https://tdrbot.github.io/fonts/ProgressPixel.ttf");
 }
+      @font-face {
+    font-family: deltarune;
+    src: url("https://tdrbot.github.io/fonts/deltarune.ttf");
+}
       :root {
         scroll-behavior: smooth
       }
@@ -72,7 +76,7 @@ a:active {
 	width: 10%;
 	height: 70px;
 }
-a {
+a, details {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
  html {
@@ -159,5 +163,22 @@ input {
 }
 
 .topbar a {
-  width: 100%
+  width: 100%;
+}
+
+.deltarune-font {
+  font-family: deltarune;
+}
+
+textarea {
+  font-family: Determination;
+  color: white;
+  border: solid 3px white;
+  background: black
+}
+
+textarea:disabled {
+  font-family: Determination;
+  color: gray;
+  background: black
 }
