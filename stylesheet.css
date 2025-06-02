@@ -176,8 +176,8 @@ input {
 }
 
 .sonic2-font {
-  font-family: Sonic2Credits, sans-serif;
-  font-size: 0.5em;
+  font-family: Sonic2Credits, Helvetica, sans-serif;
+  font-size: 0.75em;
 }
 
 textarea {
