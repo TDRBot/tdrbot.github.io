@@ -63,6 +63,11 @@ a:active {
     font-family: deltarune;
     src: url("https://tdrbot.github.io/fonts/deltarune.ttf");
 }
+
+      @font-face {
+    font-family: Sonic 2 Credits;
+    src: url("https://tdrbot.github.io/fonts/credits-font-sonic-the-hedgehog-2.ttf");
+}
       :root {
         scroll-behavior: smooth
       }
@@ -168,6 +173,10 @@ input {
 
 .deltarune-font {
   font-family: deltarune;
+}
+
+.sonic2-font {
+  font-family: Sonic 2 Credits;
 }
 
 textarea {
