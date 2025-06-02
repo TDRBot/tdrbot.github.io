@@ -65,11 +65,11 @@ a:active {
 }
 
       @font-face {
-    font-family: Sonic 2 Credits;
+    font-family: Sonic2Credits;
     src: url("https://tdrbot.github.io/fonts/credits-font-sonic-the-hedgehog-2.ttf");
 }
       :root {
-        scroll-behavior: smooth
+        scroll-behavior: smooth;
       }
       code {
         font-family: Determination;
@@ -176,18 +176,18 @@ input {
 }
 
 .sonic2-font {
-  font-family: Sonic 2 Credits;
+  font-family: Sonic2Credits;
 }
 
 textarea {
   font-family: Determination;
   color: white;
   border: solid 3px white;
-  background: black
+  background: black;
 }
 
 textarea:disabled {
   font-family: Determination;
   color: gray;
-  background: black
+  background: black;
 }
