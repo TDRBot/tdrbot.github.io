@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>TDRP's Window Manager Script</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16">
+  <link rel="stylesheet" href="https://tdrbot.github.io/stylesheet.css">
+  <link rel="icon" type="image/x-icon" href="https://tdrbot.github.io/favicon.ico">
+</head>
+<body>
+  <center>
+    <img src="https://tdrbot.github.io/images/main/WelcomeBanner.png" alt="Welcome Banner">
+    <br>
+    <br>
+    <div class="topbar">
+      <a href="https://tdrbot.github.io/"><button>Homepage</button></a>
+      <a href="https://tdrbot.github.io/projects"><button>My Projects</button></a>
+      <a href="https://tdrbot.github.io/about"><button>About</button></a>
+      <a href="https://tdrbot.github.io/archive"><button>Website Archives</button></a>
+      <a href="https://tdrbot.github.io/webring"><button>Webring</button></a>
+    </div>
+    <br>
+    <div class="container">
+      <h1>Window Manager Script</h1>
+      <img src="https://tdrbot.github.io/images/scripts/window_manager.png" alt="Window Manager Script" />
+      <br>
+      <p>Last edited: 6/17/25 (EU Date: 17/6/25)</p>
+      <br>
+      <br>
+      <p>This custom module allows you to create and remove windows containing text on any part of the game window.</p>
+      <p><strong>WARNING:</strong> This script isn't recommended for use by developers of other scripts! Please, for the love of anything, make your own windows instead of using my bad script.</p>
+      <hr>
+      <p>Download link: <a href="/rgss3/window-manager/script.rb">here.</a></p>
+      <hr>
+      <h2>Creating a Window</h2>
+      <p>Use the following script call to create a new window:</p>
+      <pre><code>TDRP_WindowManager.create_window(:id, "message", x, y)</code></pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>:id (Symbol) - The ID for your window. You <em>must</em> include the colon :.</li>
+        <li>message (String) - The text inside your window.</li>
+        <li>x (Integer) - The horizontal position in pixels.</li>
+        <li>y (Integer) - The vertical position in pixels.</li>
+      </ul>
+      <p><strong>Example usage:</strong></p>
+      <pre><code>TDRP_WindowManager.create_window(:greeting, "Howdy!", 0, 0)</code></pre>
+      <hr>
+      <h2>Disposing a Window</h2>
+      <p>To remove an existing window, use:</p>
+      <pre><code>TDRP_WindowManager.dispose_window(:id)</code></pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>:id (Symbol) - The ID of the window to remove.</li>
+      </ul>
+      <p><strong>Example usage:</strong></p>
+      <pre><code>TDRP_WindowManager.dispose_window(:greeting)</code></pre>
+      <hr>
+      <h2>Dispose All Windows</h2>
+      <p>Use the following call to remove all created windows:</p>
+      <pre><code>TDRP_WindowManager.dispose_all</code></pre>
+      <hr>
+      <p><em>You don't have to give me credit for this script! :D</em></p>
+    </div>
+  </center>
+</body>
+</html>

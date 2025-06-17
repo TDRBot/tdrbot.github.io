@@ -73,6 +73,12 @@ a:active {
       }
       code {
         font-family: Determination;
+        padding:10px;
+        background:rgb(10, 10, 10);
+        border: solid 2px rgb(29, 29, 29);
+        font-size: 18px;
+        margin: 5px;
+        color:grey;
       }
 	img {
 	image-rendering: pixelated;
