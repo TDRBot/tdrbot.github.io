@@ -90,6 +90,10 @@ a:active {
 a, details {
   cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
+
+.help {
+  cursor:url("https://tdrbot.github.io/cursors/Help.png"), help;
+}
  html {
    cursor:url("https://tdrbot.github.io/cursors/Default.png"), default;
  }
