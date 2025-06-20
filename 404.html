@@ -37,11 +37,21 @@
         }
         a:hover {
             text-decoration: underline;
-            color: #66ff66; /* Lighter green on hover */
+            color: #66ff66;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+        a, details {
+            cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+        }
+
+        .help {
+             cursor:url("https://tdrbot.github.io/cursors/Help.png"), help;
+        }
+        html {
+          cursor:url("https://tdrbot.github.io/cursors/Default.png"), default;
         }
     </style>
 </head>
@@ -50,7 +60,6 @@
         <h1>Whoops!</h1>
         <p>It seems like this page doesn't exist or was moved...</p>
         <p>Gotta add this page back... or not.</p>
-        <br>
         <p>Please select an option!</p>
         <br>
         <a href="#" onclick="window.location.reload(true);" style="cursor:url('https://tdrbot.github.io/cursors/Update.png'), pointer">Refresh</a> • <a href="https://tdrbot.github.io">Go back to main site</a>
