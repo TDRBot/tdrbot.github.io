@@ -21,163 +21,184 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-      body {
-        color: white;
-        font-family: DotGothic16;
-        background-image: url('https://tdrbot.github.io/images/SiteBG.png');
-      }
-
-      .container {
-        background-color: #091a07;
-        border:solid 5px white;
-        border-radius: 5px;
-        text-align:center;
-        width:50%;
-        max-width:50%;
-        padding: 10px;
-      }
-
-     body ::selection  {
-	     color: black;
-	     background: #00ff00;
-     }
-      table, tr, th, td {
-        border: 3px solid white;
-        background-color:black;
-        font-family: Determination;
-        width: 626
-      }
-      @font-face {
-    font-family: Determination;
-    src: url("https://tdrbot.github.io/fonts/font8bitoper.ttf");
-}
-      @font-face {
-    font-family: DOS Font;
-    src: url("https://tdrbot.github.io/fonts/DOSFont.ttf");
-}
-      @font-face {
-    font-family: ProgressPixel;
-    src: url("https://tdrbot.github.io/fonts/ProgressPixel.ttf");
-}
-      @font-face {
-    font-family: deltarune;
-    src: url("https://tdrbot.github.io/fonts/deltarune.ttf");
+body {
+  color: white;
+  font-family: DotGothic16;
+  background-image: url("https://tdrbot.github.io/images/SiteBG.png");
 }
 
-      @font-face {
-    font-family: Sonic2Credits;
-    src: url("https://tdrbot.github.io/fonts/credits-font-sonic-the-hedgehog-2.ttf");
+.container {
+  background-color: #091a07;
+  border: solid 5px white;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  max-width: 50%;
+  padding: 10px;
 }
-      :root {
-        scroll-behavior: smooth;
-      }
-      code {
-        font-family: Determination;
-      }
 
-      code .codebox {
-        padding:10px;
-        background:rgb(10, 10, 10);
-        border: solid 2px rgb(29, 29, 29);
-        font-size: 18px;
-        margin: 5px;
-        color:grey;
-      }
-	img {
-	image-rendering: pixelated;
+body ::selection {
+  color: black;
+  background: #00ff00;
+}
+table,
+tr,
+th,
+td {
+  border: 3px solid white;
+  background-color: black;
+  font-family: Determination;
+  width: 626;
+}
+@font-face {
+  font-family: Determination;
+  src: url("https://tdrbot.github.io/fonts/font8bitoper.ttf");
+}
+@font-face {
+  font-family: DOS Font;
+  src: url("https://tdrbot.github.io/fonts/DOSFont.ttf");
+}
+@font-face {
+  font-family: ProgressPixel;
+  src: url("https://tdrbot.github.io/fonts/ProgressPixel.ttf");
+}
+@font-face {
+  font-family: deltarune;
+  src: url("https://tdrbot.github.io/fonts/deltarune.ttf");
+}
+
+@font-face {
+  font-family: Sonic2Credits;
+  src: url("https://tdrbot.github.io/fonts/credits-font-sonic-the-hedgehog-2.ttf");
+}
+:root {
+  scroll-behavior: smooth;
+}
+code {
+  font-family: Determination;
+}
+
+.codebox {
+  padding: 10px;
+  background: rgb(10, 10, 10);
+  border: solid 2px rgb(29, 29, 29);
+  font-size: 18px;
+  margin: 5px;
+  color: grey;
+}
+img {
+  image-rendering: pixelated;
 }
 .nav-btn {
-	width: 10%;
-	height: 70px;
+  width: 10%;
+  height: 70px;
 }
-a, details {
-  cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+a,
+details {
+  cursor: url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
 
 .help {
-  cursor:url("https://tdrbot.github.io/cursors/Help.png"), help;
+  cursor: url("https://tdrbot.github.io/cursors/Help.png"), help;
 }
- html {
-   cursor:url("https://tdrbot.github.io/cursors/Default.png"), default;
- }
+html {
+  cursor: url("https://tdrbot.github.io/cursors/Default.png"), default;
+}
 button {
-  cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+  cursor: url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
   border: solid 3px orange;
   background-color: black;
   color: orange;
   font-family: Determination;
 }
 button:hover {
-	border: solid 3px yellow;
-	color: yellow;
+  border: solid 3px yellow;
+  color: yellow;
 }
 option {
-  cursor:url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
+  cursor: url("https://tdrbot.github.io/cursors/Pointer.png"), pointer;
 }
 input {
-  cursor:url("https://tdrbot.github.io/cursors/Text.png"), text;
+  cursor: url("https://tdrbot.github.io/cursors/Text.png"), text;
 }
 .rainbow-glow {
-  position:relative;
-  z-index:2
+  position: relative;
+  z-index: 2;
 }
 .rainbow-glow:before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:100%;
-  width:100%;
-  z-index:-1;
-  transform:scale(1) translateZ(0);
-  filter:blur(15px);
-  background:linear-gradient(90deg,red,#ff4500,orange,gold,#ff0,#adff2f,green,#20b2aa,#0ff,#00f,indigo,#8a2be2,#9400d3,#c71585,#ff1493);
-  background-size:200% 200%;
-  animation:animateGlow 5.25s linear infinite
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: scale(1) translateZ(0);
+  filter: blur(15px);
+  background: linear-gradient(
+    90deg,
+    red,
+    #ff4500,
+    orange,
+    gold,
+    #ff0,
+    #adff2f,
+    green,
+    #20b2aa,
+    #0ff,
+    #00f,
+    indigo,
+    #8a2be2,
+    #9400d3,
+    #c71585,
+    #ff1493
+  );
+  background-size: 200% 200%;
+  animation: animateGlow 5.25s linear infinite;
 }
 .rainbow-glow:hover:before {
-  filter:blur(15px) brightness(2.2)
+  filter: blur(15px) brightness(2.2);
 }
 @keyframes animateGlow {
   0% {
-    background-position:200% 50%
+    background-position: 200% 50%;
   }
   to {
-    background-position:0 50%
+    background-position: 0 50%;
   }
 }
 @keyframes animateGlow-bottom {
   0% {
-    background-position:0 200%
+    background-position: 0 200%;
   }
   to {
-    background-position:50% 0
+    background-position: 50% 0;
   }
 }
 @keyframes Rotate {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(359deg);
-}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .topbar {
-  width:50%;
-  max-width:50%;
-  display:flex;
+  width: 50%;
+  max-width: 50%;
+  display: flex;
 }
 
 .topbar button {
-  width:100%;
-  height:100px;
-  font-size:larger;
+  width: 100%;
+  height: 100px;
+  font-size: larger;
 }
 
 .topbar a:link {
-  color:orange;
+  color: orange;
 }
 
 .topbar a {
