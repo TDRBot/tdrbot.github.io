@@ -219,7 +219,6 @@ textarea {
   color: white;
   border: solid 3px white;
   background: black;
-  white-space: nowrap;
 }
 
 textarea:disabled {
