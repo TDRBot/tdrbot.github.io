@@ -37,7 +37,7 @@
       <br>
       <h2>USER AD</h2>
       <a href="https://tdrp-game-files.netlify.app/website/adform" id="ads-link">
-        <img style="width: 80%;" src="images/ads/!Official/AdShow.gif" id="ads-image">
+        <img style="width: 80%;" src="images/ads/!Official/AdShow.gif" id="ads-image" title="Want to get an ad on my website? Click here!">
       </a>
       <br>
       <a href="https://tdrp-game-files.netlify.app/website/adform">Submit an ad here!</a>
@@ -55,8 +55,38 @@
   </center>
   <!-- Ad logic -->
    <script>
-    // VARIABLES
-    let a = "a"
+    // AD START
+    let ads = fetch("https://tdrbot.github.io/ads.json");
+    let total_ads = Object.keys(ads).length;
+
+    // AD INFO
+    let ad_link = "https://tdrp-game-files.netlify.app/website/adform";
+    let ad_img = "images/ads/!Official/AdShow.gif";
+    let ad_desc = "Want to get an ad on my website? Click here!";
+    let ad_index = 0;
+
+
+    window.onload = setInterval(updateads, 7500);
+
+    function updateads() {
+      ad_img = ads[ad_index].image;
+      ad_link = ads[ad_index].link;
+      ad_desc = ads[ad_index].description;
+      ad_index = ad_index + 1;
+      if (ad_index > total_ads) {
+        ad_index = ad_index + 0;
+        ad_img = ads[ad_index].image;
+        ad_link = ads[ad_index].link;
+        ad_desc = ads[ad_index].description;
+      }
+      document.getElementById("ads-image").src = ad_img;
+      document.getElementById("ads-image").title = ad_desc;
+      document.getElementById("ads-link").href = ad_link;
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
    </script>
 </body>
 </html>

@@ -1,4 +1,17 @@
 {
-    "fallback":
-        ["images/ads/!Official/AdShow.gif", "https://tdrp-game-files.netlify.app/website/adform"]
+    "ad_list":
+    [
+        {
+            "image": "images/ads/!Official/AdShow.gif",
+            "link": "https://tdrp-game-files.netlify.app/website/adform",
+            "description": "Want to get an ad on my website? Click here!",
+            "id": 1
+        },
+        {
+            "image": "images/ads/!Official/TDRPNGPromo.gif",
+            "link": "https://tdrp.newgrounds.com",
+            "description": "TDRP makes art, and he posts it on Newgrounds!",
+            "id": 2
+        }
+    ]
 }
