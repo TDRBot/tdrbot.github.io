@@ -56,7 +56,8 @@
   <!-- Ad logic -->
    <script>
     // AD START
-    let ads = JSON.parse(fetch("https://tdrbot.github.io/ads.json"));
+    let ad_file = fetch("https://tdrbot.github.io/ads.json");
+    let ads = JSON.parse(ad_file);
     let total_ads = Object.keys(ads).length;
 
     // AD INFO
