@@ -88,12 +88,12 @@
 
     function updateads() {
       ad_index++;
-      ad_img = ads.ad_list[ad_index].image;
-      ad_link = ads.ad_list[ad_index].link;
-      ad_desc = ads.ad_list[ad_index].description;
       if (ad_index > total_ads) {
         ad_index = 0;
       }
+      ad_img = ads.ad_list[ad_index].image;
+      ad_link = ads.ad_list[ad_index].link;
+      ad_desc = ads.ad_list[ad_index].description;
       document.getElementById("ads-image").src = ad_img;
       document.getElementById("ads-image").title = ad_desc;
       document.getElementById("ads-link").href = ad_link;
