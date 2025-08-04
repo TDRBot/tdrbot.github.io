@@ -88,7 +88,7 @@
 
     function updateads() {
       ad_index++;
-      if (ad_index > total_ads) {
+      if (ad_index > (total_ads - 1)) {
         ad_index = 0;
       }
       ad_img = ads.ad_list[ad_index].image;
