@@ -41,6 +41,10 @@
       </a>
       <br>
       <a href="https://tdrp-game-files.netlify.app/website/adform">Submit an ad here!</a>
+      <details>
+        <summary>View ad data.</summary>
+        <textarea disabled id="ad-data-preview" style="width:80%; height:200px; white-space: nowrap;"></textarea>
+      </details>
       <br>
 	    <br>
       <br>
@@ -91,6 +95,8 @@
 
 
     window.onload = setInterval(updateads, 7500);
+
+    document.getElementById("ad-data-preview").textContent = JSON.stringify(ads, null, 2);
 
     function updateads() {
       ad_index++;
