@@ -50,15 +50,32 @@
       <a href="/webring"><img src="images/other/badges/tdrp-is-here.png"></a>
       <br>
       <br>
+      <button onclick="updateads()" style="display: none;">test</button>
       <script type="text/javascript" src="https://counter.websiteout.com/js/2/15/161/0"></script>
     </div>
   </center>
   <!-- Ad logic -->
    <script>
     // AD START
-    let ad_file = fetch("https://tdrbot.github.io/ads.json");
-    let ads = JSON.parse(ad_file);
-    let total_ads = Object.keys(ads).length;
+    let ads = {
+    "ad_list":
+    [
+        {
+            "image": "images/ads/!Official/AdShow.gif",
+            "link": "https://tdrp-game-files.netlify.app/website/adform",
+            "description": "Want to get an ad on my website? Click here!",
+            "id": 1
+        },
+        {
+            "image": "images/ads/!Official/TDRPNGPromo.gif",
+            "link": "https://tdrp.newgrounds.com",
+            "description": "TDRP makes art, and he posts it on Newgrounds!",
+            "id": 2
+        }
+    ]
+};
+
+    let total_ads = ads.ad_list.length;
 
     // AD INFO
     let ad_link = "https://tdrp-game-files.netlify.app/website/adform";
@@ -70,15 +87,15 @@
     window.onload = setInterval(updateads, 7500);
 
     function updateads() {
-      ad_img = ads[ad_index].image;
-      ad_link = ads[ad_index].link;
-      ad_desc = ads[ad_index].description;
-      ad_index = ad_index + 1;
+      ad_img = ads.ad_list[ad_index].image;
+      ad_link = ads.ad_list[ad_index].link;
+      ad_desc = ads.ad_list[ad_index].description;
+      ad_index++;
       if (ad_index > total_ads) {
-        ad_index = ad_index + 0;
-        ad_img = ads[ad_index].image;
-        ad_link = ads[ad_index].link;
-        ad_desc = ads[ad_index].description;
+        ad_index = 0;
+        ad_img = ads.ad_list[ad_index].image;
+        ad_link = ads.ad_list[ad_index].link;
+        ad_desc = ads.ad_list[ad_index].description;
       }
       document.getElementById("ads-image").src = ad_img;
       document.getElementById("ads-image").title = ad_desc;
