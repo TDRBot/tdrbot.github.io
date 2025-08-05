@@ -124,11 +124,12 @@
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
           document.getElementById("body").classList.add("tenna");
-          document.getElementById("tenna-bgm").play();
           document.getElementById("header-main").classList.add("operator");
           document.getElementById("header-main").style.fontWeight = "normal";
           document.getElementById("header-main").textContent = "———— WEBSITE RESULTS ————";
           document.getElementById("header-main").style.fontSize = "3em";
+          sleep(5000);
+          document.getElementById("tenna-bgm").play();
         }
       }
     </script>
