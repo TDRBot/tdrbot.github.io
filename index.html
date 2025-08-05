@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://tdrbot.github.io/stylesheet.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
-  <body>
+  <body id="body">
     <!-- Do you like the new site? -->
   <center>
         <img src="images/main/WelcomeBanner.png">
@@ -52,7 +52,8 @@
       <a href="/webring"><img src="images/other/badges/tdrp-is-here.png"></a>
       <br>
       <br>
-      <button onclick="updateads()" style="display: none;">test</button>
+      <button onclick="updateads()" style="display: none;">Switch Ad</button>
+      <button onclick="updateads()" style="display: none;">Tenna Test</button>
       <script type="text/javascript" src="https://counter.websiteout.com/js/2/15/161/0"></script>
     </div>
   </center>
@@ -113,5 +114,15 @@
       return new Promise(resolve => setTimeout(resolve, ms));
     }
    </script>
+   <!-- other funny stuff :) -->
+    <script>
+      window.onload = tenna()
+      
+      function tenna() {
+        if (Math.floor(Math.random() * 20) == 10) {
+          document.getElementById("body").classList.add("tenna");
+        }
+      }
+    </script>
 </body>
 </html>
