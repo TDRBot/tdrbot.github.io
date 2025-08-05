@@ -22,6 +22,9 @@
     <a href="https://tdrbot.github.io/webring"><button>Webring</button></a>
   </div>  
   <br>
+  <audio style="display: none;" id="tenna-bgm">
+    <source src="audio/tv_results_screen.ogg" type="audio/mpeg">
+  </audio>
     <div class="container">
       <h1>Welcome to my humble abode.</h1>
       <p>This is my website where I post stuff, I don't know, WHAT stuff but expect stuff!</p>
@@ -121,6 +124,7 @@
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
           document.getElementById("body").classList.add("tenna");
+          document.getElementById("tenna-bgm").play();
         }
       }
     </script>
