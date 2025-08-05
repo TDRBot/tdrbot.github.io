@@ -29,6 +29,7 @@ body {
 
 .tenna {
   background-image: url("https://tdrbot.github.io/images/tennabg.gif");
+  animation: bgfly 500s infinite cubic-bezier(.23,.19,.72,.77);
 }
 
 .container {
@@ -272,3 +273,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@keyframes bgfly {
+   from { background-position-x: 0%; background-position-y: 0% }
+   to {background-position-x: 2500%; background-position-y: 2500%}
+}
