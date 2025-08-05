@@ -27,6 +27,12 @@
   </audio>
     <div class="container">
       <h1 id="header-main">Welcome to my humble abode.</h1>
+      <ul id="results" style="display: none; font-family: Determination">
+        <li>RANDOM CHANCE    20</li>
+        <li>TIME ON WEBSITE   1</li>
+      </ul>
+      <br>
+      <h2 style="display: none; font-family: Determination;" id="results-rank">T-RANK</h2>
       <p>This is my website where I post stuff, I don't know, WHAT stuff but expect stuff!</p>
 	    <br>
       <h1>WHAT'S NEW?</h1>
@@ -128,6 +134,9 @@
           document.getElementById("header-main").classList.add("operator");
           document.getElementById("header-main").style.fontWeight = "normal";
           document.getElementById("header-main").textContent = "———— WEBSITE RESULTS ————";
+          document.getElementById("header-main").style.fontSize = "3em";
+          document.getElementById("results").style.display = "block";
+          document.getElementById("results-rank").style.display = "block";
         }
       }
     </script>
