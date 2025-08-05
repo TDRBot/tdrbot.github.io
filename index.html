@@ -22,11 +22,11 @@
     <a href="https://tdrbot.github.io/webring"><button>Webring</button></a>
   </div>  
   <br>
-  <audio style="display: none;" id="tenna-bgm">
+  <audio style="display: none;" id="tenna-bgm" loop>
     <source src="audio/tv_results_screen.ogg" type="audio/mpeg">
   </audio>
     <div class="container">
-      <h1>Welcome to my humble abode.</h1>
+      <h1 id="header-main">Welcome to my humble abode.</h1>
       <p>This is my website where I post stuff, I don't know, WHAT stuff but expect stuff!</p>
 	    <br>
       <h1>WHAT'S NEW?</h1>
@@ -125,6 +125,9 @@
         if (Math.floor(Math.random() * 20) == 10) {
           document.getElementById("body").classList.add("tenna");
           document.getElementById("tenna-bgm").play();
+          document.getElementById("header-main").classList.add("operator");
+          document.getElementById("header-main").style.fontWeight = "normal";
+          document.getElementById("header-main").textContent = "———— WEBSITE RESULTS ————";
         }
       }
     </script>
