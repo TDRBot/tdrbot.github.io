@@ -128,9 +128,17 @@
           document.getElementById("header-main").style.fontWeight = "normal";
           document.getElementById("header-main").textContent = "———— WEBSITE RESULTS ————";
           document.getElementById("header-main").style.fontSize = "3em";
-          sleep(5000);
-          document.getElementById("tenna-bgm").play();
+          window.addEventListener("mousedown", tennaBgm);
+          window.addEventListener("keydown", tennaBgm);
+          window.addEventListener("touchstart", tennaBgm);
         }
+      }
+
+      function tennaBgm() {
+        document.getElementById("tenna-bgm").play();
+        window.removeEventListener("mousedown", tennaBgm);
+        window.removeEventListener("keydown", tennaBgm);
+        window.removeEventListener("touchstart", tennaBgm);
       }
     </script>
 </body>
