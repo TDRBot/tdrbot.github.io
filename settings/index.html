@@ -53,8 +53,8 @@
       <script>
         document.getElementById("name-input").value = getCookie("username");
         document.getElementById("ad-duration").value = getCookie("adfreq");
-        if (getCookie("addatadisplay") == true) {
-          document.getElementById("ad-duration").checked = true;
+        if (getCookie("addatadisplay") == "true") {
+          document.getElementById("show-ad-data").checked = true;
         }
 
         function setName() {
