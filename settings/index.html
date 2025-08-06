@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>TDRP's Website - Settings</title>
+        <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16">
+	<link rel="stylesheet" href="https://tdrbot.github.io/stylesheet.css">
+  <link rel="icon" type="image/x-icon" href="https://tdrbot.github.io/favicon.ico">
+  </head>
+  <body>
+  <center>
+        <img src="https://tdrbot.github.io/images/main/WelcomeBanner.png">
+	  <br>
+  <br>
+  <div class="topbar">
+    <a href="https://tdrbot.github.io/"><button>Homepage</button></a>
+    <a href="https://tdrbot.github.io/projects"><button>My Projects</button></a>
+    <a href="https://tdrbot.github.io/about"><button>About</button></a>
+    <a href="https://tdrbot.github.io/archive"><button>Website Archives</button></a>
+    <a href="https://tdrbot.github.io/webring"><button>Webring</button></a>
+  </div>  
+  <br>
+    <div class="container">
+        <h1>Settings</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr>
+      <h3>Input your name!</h3>
+      <input id="name-input" type="text">
+      <button type="submit" onclick="setName()">Submit!</button>
+      <hr>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <script>
+        function setName() {
+            let name = document.getElementById("name-input").value
+            document.cookie = document.cookie = "username=" + name + "; expires=Thu, 01 Jan 9999 00:00:00 UTC; path=/;";
+        }
+      </script>
+    </div>
+  </center>
+</body>
+</html>

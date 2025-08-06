@@ -9,6 +9,9 @@
   </head>
   <body id="body">
     <!-- Do you like the new site? -->
+  <div style="position: fixed; float: right;">
+    <a href="/settings"><button>Settings</button></a>
+  </div>
   <center>
         <img src="images/main/WelcomeBanner.png">
 	  <br>
@@ -133,7 +136,9 @@
     <script>
       window.onload = tenna()
 
-      window.onload = checkdev()
+      window.onload = checkDev()
+
+      window.onload = checkName()
       
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
@@ -169,11 +174,21 @@
         return "";
       }
 
-      function checkdev() {
+      function checkDev() {
         let dev = getCookie("debug");
 
         if (dev == "true") {
           document.getElementById("debug-stuff").style.display = "block";
+        }
+      }
+
+      function checkName() {
+        let username = getCookie("username");
+
+        if (username != "") {
+          document.getElementById("header-main").textContent = "Welcome back, " + username + "!";
+        } else {
+          document.getElementById("header-main").textContent = "Welcome to my humble abode.";
         }
       }
     </script>
