@@ -13,6 +13,9 @@
       <div id="duration-change" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
         <p>Successfully changed ad duration!</p>
       </div>
+      <div id="ad-data-display-notif" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
+        <p>Successfully changed ad data display!</p>
+      </div>
     </div>
   <center>
         <img src="https://tdrbot.github.io/images/main/WelcomeBanner.png">
@@ -28,10 +31,6 @@
   <br>
     <div class="container">
         <h1>Settings</h1>
-      <br>
-      <br>
-      <br>
-      <br>
       <hr>
       <h3>Input your name!</h3>
       <input id="name-input" type="text" value="User">
@@ -42,6 +41,9 @@
       <input type="number" name="ad-frequency" placeholder="5000" id="ad-duration">
       <button type="submit" onclick="setDuration()">Confirm</button>
       <small style="display: block;"><i>To turn seconds to milliseconds, multiply seconds by 1000.</i></small>
+      <br>
+      <label for="autodisplayads">Automatically Display Ad Data</label>
+      <input type="checkbox" name="autodisplayads" id="show-ad-data" onchange="displayAdData()">
       <hr>
       <br>
       <br>
@@ -49,20 +51,36 @@
       <br>
       <br>
       <script>
+        document.getElementById("name-input").value = getCookie("username");
+        document.getElementById("ad-duration").value = getCookie("adfreq");
+        if (getCookie("addatadisplay") == "true") {
+          document.getElementById("ad-duration").checked = true;
+        }
+
         function setName() {
-            let name = document.getElementById("name-input").value
-            setCookie("username", name, 730)
-            window.location.href = "https://tdrbot.github.io?msgbox=namechange"
+            let name = document.getElementById("name-input").value;
+            setCookie("username", name, 730);
+            window.location.href = "https://tdrbot.github.io?msgbox=namechange";
         }
 
         function setDuration() {
-          let duration = document.getElementById("ad-duration").value
-          setCookie("adfreq", duration, 730)
-          window.location.href = "https://tdrbot.github.io/settings?msgbox=setdur"
+          let duration = document.getElementById("ad-duration").value;
+          setCookie("adfreq", duration, 730);
+          window.location.href = "https://tdrbot.github.io/settings?msgbox=setdur";
+        }
+
+        function displayAdData() {
+          let doaddata = document.getElementById("show-ad-data").checked;
+          setCookie("addatadisplay", doaddata, 730);
+          window.location.href = "https://tdrbot.github.io/settings?msgbox=showdata";
         }
 
         if (parameters.has('msgbox') && parameters.get("msgbox") == "setdur") {
           document.getElementById("duration-change").style.display = "block";
+        }
+
+        if (parameters.has('msgbox') && parameters.get("msgbox") == "showdata") {
+          document.getElementById("ad-data-display-notif").style.display = "block";
         }
       </script>
     </div>

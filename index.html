@@ -51,7 +51,7 @@
       </a>
       <br>
       <a href="https://tdrp-game-files.netlify.app/website/adform">Submit an ad here!</a>
-      <details>
+      <details id="ad-data">
         <summary>View ad data.</summary>
         <textarea disabled id="ad-data-preview" style="width:80%; height:200px; white-space: nowrap;"></textarea>
       </details>
@@ -65,8 +65,6 @@
       <br>
       <br>
       <script type="text/javascript" src="https://counter.websiteout.com/js/2/15/161/0"></script>
-      <br>
-      <br>
       <div id="debug-stuff" style="display: none;">
         <h1>DEBUG STUFF YEAHHHH</h1>
         <br>
@@ -191,6 +189,14 @@
           ad_duration = 5000
         }
         setInterval(updateads, parseInt(ad_duration));
+      }
+
+      if (getCookie("addatadisplay") == "") {
+        setCookie("addatadisplay", false, 730);
+      }
+      
+      if (getCookie("addatadisplay") == "true") {
+        document.getElementById("ad-data").setAttribute("open", "open")
       }
     </script>
 </body>
