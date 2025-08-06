@@ -115,8 +115,9 @@
     let ad_img = "images/ads/!Official/AdShow.gif";
     let ad_desc = "Want to get an ad on my website? Click here!";
     let ad_index = 0;
+    let ad_duration = 5000;
 
-    window.onload = setInterval(updateads, 5000);
+    window.onload = getAdDur();
 
     document.getElementById("ad-data-preview").textContent = JSON.stringify(ads, null, 2);
 
@@ -181,6 +182,11 @@
 
       if (parameters.has('msgbox') && parameters.get("msgbox") == "namechange") {
         document.getElementById("name-notif").style.display = "block";
+      }
+
+      function getAdDur() {
+        ad_duration = getCookie("adfreq");
+        setInterval(updateads, ad_duration);
       }
     </script>
 </body>

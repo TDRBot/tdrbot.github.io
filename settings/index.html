@@ -9,6 +9,9 @@
   <script src="https://tdrbot.github.io/global.js"></script>
   </head>
   <body>
+    <div id="duration-change" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
+      <p>Successfully changed ad duration!</p>
+    </div>
   <center>
         <img src="https://tdrbot.github.io/images/main/WelcomeBanner.png">
 	  <br>
@@ -30,7 +33,13 @@
       <hr>
       <h3>Input your name!</h3>
       <input id="name-input" type="text">
-      <button type="submit" onclick="setName()">Submit!</button>
+      <button type="submit" onclick="setName()">Confirm</button>
+      <hr>
+      <h3>Ad Settings</h3>
+      <label for="ad-frequency">Ad Duration (milliseconds):</label>
+      <input type="number" name="ad-frequency" placeholder="5000" id="ad-duration">
+      <button type="submit" onclick="setDuration()">Confirm</button>
+      <small style="display: block;"><i>To turn seconds to milliseconds, multiply seconds by 1000.</i></small>
       <hr>
       <br>
       <br>
@@ -42,6 +51,16 @@
             let name = document.getElementById("name-input").value
             setCookie("username", name, 730)
             window.location.href = "https://tdrbot.github.io?msgbox=namechange"
+        }
+
+        function setDuration() {
+          let duration = document.getElementById("ad-duration").value
+          setCookie("adfreq", duration, 730)
+          window.location.href = "https://tdrbot.github.io/settings?msgbox=setdur"
+        }
+
+        if (parameters.has('msgbox') && parameters.get("msgbox") == "setdur") {
+          document.getElementById("duration-change").style.display = "block";
         }
       </script>
     </div>
