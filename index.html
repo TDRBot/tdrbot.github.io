@@ -38,7 +38,7 @@
       <br>
       <h2>USER AD</h2>
       <a href="https://tdrp-game-files.netlify.app/website/adform" id="ads-link">
-        <img style="width: 80%;" src="images/ads/!Official/AdShow.gif" id="ads-image" title="Want to get an ad on my website? Click here!">
+        <img style="width: 80%; object-fit: cover; aspect-ratio: 7 / 3.5;" src="images/ads/!Official/AdShow.gif" id="ads-image" title="Want to get an ad on my website? Click here!">
       </a>
       <br>
       <a href="https://tdrp-game-files.netlify.app/website/adform">Submit an ad here!</a>
@@ -102,7 +102,7 @@
     let ad_index = 0;
 
 
-    window.onload = setInterval(updateads, 7500);
+    window.onload = setInterval(updateads, 5000);
 
     document.getElementById("ad-data-preview").textContent = JSON.stringify(ads, null, 2);
 
