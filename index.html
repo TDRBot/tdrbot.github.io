@@ -185,7 +185,10 @@
       }
 
       function getAdDur() {
-        ad_duration = getCookie("adfreq");
+        ad_duration = parseInt(getCookie("adfreq"));
+        if (ad_duration == 0) {
+          ad_duration == 5000;
+        }
         setInterval(updateads, ad_duration);
       }
     </script>
