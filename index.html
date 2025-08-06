@@ -10,7 +10,12 @@
   <body id="body">
     <!-- Do you like the new site? -->
   <div style="position: fixed; float: right;">
-    <a href="/settings"><button>Settings</button></a>
+    <a href="/settings"><img src="icons/gearcog.png"></a>
+    <br>
+    <br>
+    <div id="name-notif" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
+      <p>Successfully changed your name!</p>
+    </div>
   </div>
   <center>
         <img src="images/main/WelcomeBanner.png">
@@ -70,7 +75,6 @@
       </div>
     </div>
   </center>
-  <!-- Ad logic -->
    <script>
     // AD START
     let ads = {
@@ -131,9 +135,7 @@
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
-   </script>
-   <!-- other funny stuff :) -->
-    <script>
+
       window.onload = tenna()
 
       window.onload = checkDev()
@@ -158,22 +160,6 @@
         window.removeEventListener("touchstart", tennaBgm);
       }
 
-      function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-
       function checkDev() {
         let dev = getCookie("debug");
 
@@ -191,6 +177,11 @@
           document.getElementById("header-main").textContent = "Welcome to my humble abode.";
         }
       }
+
+      if (window.location.href.toLowerCase().includes("msgbox=namechange")) {
+        document.getElementById("name-notif").style.display = "block";
+      }
     </script>
+    <script src="https://tdrbot.github.io/global.js"></script>
 </body>
 </html>

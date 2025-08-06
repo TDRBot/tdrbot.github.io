@@ -39,10 +39,12 @@
       <script>
         function setName() {
             let name = document.getElementById("name-input").value
-            document.cookie = document.cookie = "username=" + name + "; expires=Thu, 01 Jan 9999 00:00:00 UTC; path=/;";
+            setCookie("username", name, 730)
+            window.location.href = "https://tdrbot.github.io?msgbox=namechange"
         }
       </script>
     </div>
   </center>
+  <script src="https://tdrbot.github.io/global.js"></script>
 </body>
 </html>
