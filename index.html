@@ -55,9 +55,16 @@
       <a href="/webring"><img src="images/other/badges/tdrp-is-here.png"></a>
       <br>
       <br>
-      <button onclick="updateads()" style="display: none;">Switch Ad</button>
-      <button onclick="tenna()" style="display: none;">Tenna Test</button>
       <script type="text/javascript" src="https://counter.websiteout.com/js/2/15/161/0"></script>
+      <br>
+      <br>
+      <div id="debug-stuff">
+        <h1>DEBUG STUFF YEAHHHH</h1>
+        <br>
+        <button onclick="updateads()" style="display: none;">Switch Ad</button>
+        <br>
+        <button onclick="tenna()" style="display: none;">Tenna Test</button>
+      </div>
     </div>
   </center>
   <!-- Ad logic -->
@@ -101,7 +108,6 @@
     let ad_desc = "Want to get an ad on my website? Click here!";
     let ad_index = 0;
 
-
     window.onload = setInterval(updateads, 5000);
 
     document.getElementById("ad-data-preview").textContent = JSON.stringify(ads, null, 2);
@@ -126,6 +132,8 @@
    <!-- other funny stuff :) -->
     <script>
       window.onload = tenna()
+
+      window.onload = checkdev()
       
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
@@ -143,6 +151,30 @@
         document.getElementById("tenna-bgm").play();
         window.removeEventListener("mousedown", tennaBgm);
         window.removeEventListener("touchstart", tennaBgm);
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function checkdev() {
+        let dev = getCookie(debug);
+
+        if (dev == true) {
+          document.getElementById("debug-stuff").style.display = "block";
+        }
       }
     </script>
 </body>
