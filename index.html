@@ -58,7 +58,7 @@
       <script type="text/javascript" src="https://counter.websiteout.com/js/2/15/161/0"></script>
       <br>
       <br>
-      <div id="debug-stuff">
+      <div id="debug-stuff" style="display: none;">
         <h1>DEBUG STUFF YEAHHHH</h1>
         <br>
         <button onclick="updateads()">Switch Ad</button>
@@ -170,9 +170,9 @@
       }
 
       function checkdev() {
-        let dev = getCookie(debug);
+        let dev = getCookie("debug");
 
-        if (dev == true) {
+        if (dev == "true") {
           document.getElementById("debug-stuff").style.display = "block";
         }
       }
