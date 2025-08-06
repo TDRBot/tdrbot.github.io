@@ -178,7 +178,7 @@
         }
       }
 
-      if (window.location.href.toLowerCase().includes("msgbox=namechange")) {
+      if (parameters.has('msgbox') && parameters.get("msgbox") == "namechange") {
         document.getElementById("name-notif").style.display = "block";
       }
     </script>
