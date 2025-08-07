@@ -154,12 +154,22 @@
         }
       }
 
+      function getAdDur() {
+        ad_duration = getCookie("adfreq");
+        if (ad_duration == "") {
+          setCookie("adfreq", 5000, 730);
+          ad_duration = 5000
+        }
+        setInterval(updateads, parseInt(ad_duration));
+      }
+
       function tennaBgm() {
         document.getElementById("tenna-bgm").play();
         window.removeEventListener("mousedown", tennaBgm);
         window.removeEventListener("touchstart", tennaBgm);
       }
-
+      </script>
+      <script>
       function checkDev() {
         let dev = getCookie("debug");
 
@@ -180,15 +190,6 @@
 
       if (parameters.has('msgbox') && parameters.get("msgbox") == "namechange") {
         document.getElementById("name-notif").style.display = "block";
-      }
-
-      function getAdDur() {
-        ad_duration = getCookie("adfreq");
-        if (ad_duration == "") {
-          setCookie("adfreq", 5000, 730);
-          ad_duration = 5000
-        }
-        setInterval(updateads, parseInt(ad_duration));
       }
 
       if (getCookie("addatadisplay") == "") {
