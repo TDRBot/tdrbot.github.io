@@ -139,8 +139,6 @@
       window.onload = tenna()
 
       window.onload = checkDev()
-
-      window.onload = checkName()
       
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
@@ -178,6 +176,8 @@
       }
       </script>
       <script>
+      window.onload = checkName()
+
       function checkName() {
         let username = getCookie("username");
 
