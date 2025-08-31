@@ -161,7 +161,7 @@
       }
 
       function getAdDur() {
-        if (ad_duration == "null") {
+        if (ad_duration == null) {
           window.localStorage.setItem("adfreq", "5000");
           ad_duration = 5000
         }
@@ -184,7 +184,7 @@
       window.onload = checkName()
 
       function checkName() {
-        if (username != "null") {
+        if (username != null) {
           document.getElementById("header-main").textContent = "Welcome back, " + username + "!";
         } else {
           if (tenna_eatseregg != true) {
@@ -197,7 +197,7 @@
         document.getElementById("name-notif").style.display = "block";
       }
 
-      if (addatadisplay == "null") {
+      if (addatadisplay == null) {
         window.localStorage.setItem("addatadisplay", "false");
       }
       
