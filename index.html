@@ -108,6 +108,9 @@
 
     let total_ads = ads.ad_list.length;
 
+    // OTHER STUFF
+    let tenna_eatseregg = false
+
     // AD INFO
     let ad_link = "https://tdrp-game-files.netlify.app/website/adform";
     let ad_img = "images/ads/!Official/AdShow.gif";
@@ -142,6 +145,7 @@
       
       function tenna() {
         if (Math.floor(Math.random() * 20) == 10) {
+          tenna_eatseregg = true
           document.getElementById("body").classList.add("tenna");
           document.getElementById("header-main").classList.add("operator");
           document.getElementById("header-main").style.fontWeight = "normal";
@@ -154,8 +158,8 @@
 
       function getAdDur() {
         ad_duration = window.localStorage.getItem("adfreq");
-        if (ad_duration == "") {
-          window.localStorage.getItem("adfreq", 5000, 730);
+        if (ad_duration == "null") {
+          window.localStorage.getItem("adfreq", "5000");
           ad_duration = 5000
         }
         setInterval(updateads, parseInt(ad_duration));
@@ -181,10 +185,12 @@
       function checkName() {
         let username = window.localStorage.getItem("username");
 
-        if (username != "") {
+        if (username != "null") {
           document.getElementById("header-main").textContent = "Welcome back, " + username + "!";
         } else {
-          document.getElementById("header-main").textContent = "Welcome to my humble abode.";
+          if (tenna_eatseregg != true) {
+            document.getElementById("header-main").textContent = "Welcome to my humble abode.";
+          }
         }
       }
 
@@ -192,8 +198,8 @@
         document.getElementById("name-notif").style.display = "block";
       }
 
-      if (window.localStorage.getItem("addatadisplay") == "") {
-        window.localStorage.getItem("addatadisplay", false, 730);
+      if (window.localStorage.getItem("addatadisplay") == "null") {
+        window.localStorage.setItem("addatadisplay", "false");
       }
       
       if (window.localStorage.getItem("addatadisplay") == "true") {
