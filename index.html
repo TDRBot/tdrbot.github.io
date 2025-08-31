@@ -116,7 +116,11 @@
     let ad_img = "images/ads/!Official/AdShow.gif";
     let ad_desc = "Want to get an ad on my website? Click here!";
     let ad_index = 0;
-    let ad_duration = 5000;
+
+    // SETTINGS AND STUFF
+    let username = window.localStorage.getItem("username");
+    let ad_duration = window.localStorage.getItem("adfreq");
+    let addatadisplay = window.localStorage.getItem("addatadisplay");
 
     window.onload = getAdDur();
 
@@ -157,7 +161,6 @@
       }
 
       function getAdDur() {
-        ad_duration = window.localStorage.getItem("adfreq");
         if (ad_duration == "null") {
           window.localStorage.setItem("adfreq", "5000");
           ad_duration = 5000
@@ -178,13 +181,9 @@
           document.getElementById("debug-stuff").style.display = "block";
         }
       }
-      </script>
-      <script>
       window.onload = checkName()
 
       function checkName() {
-        let username = window.localStorage.getItem("username");
-
         if (username != "null") {
           document.getElementById("header-main").textContent = "Welcome back, " + username + "!";
         } else {
@@ -198,11 +197,11 @@
         document.getElementById("name-notif").style.display = "block";
       }
 
-      if (window.localStorage.getItem("addatadisplay") == "null") {
+      if (addatadisplay == "null") {
         window.localStorage.setItem("addatadisplay", "false");
       }
       
-      if (window.localStorage.getItem("addatadisplay") == "true") {
+      if (addatadisplay == "true") {
         document.getElementById("ad-data").setAttribute("open", "open")
       }
     </script>
