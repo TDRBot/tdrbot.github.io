@@ -159,7 +159,7 @@
       function getAdDur() {
         ad_duration = window.localStorage.getItem("adfreq");
         if (ad_duration == "null") {
-          window.localStorage.getItem("adfreq", "5000");
+          window.localStorage.setItem("adfreq", "5000");
           ad_duration = 5000
         }
         setInterval(updateads, parseInt(ad_duration));
