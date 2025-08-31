@@ -40,9 +40,9 @@
 	    <br>
       <h1>WHAT'S NEW?</h1>
       <hr>
-      <h2>TDRP Sticker Pack Volume 1!</h2>
-      <p>6 stickers by TDRP! Use for Discord, iMessage, and more!</p>
-      <a href="https://tdrbot.github.io/projects/stickers/volume-1">Check it out!</a>
+      <h2>BLOGS!</h2>
+      <p>THE NEW BLOG SYSTEM IS HERE! You can see updates from me about life, the website, and more!</p>
+      <a href="https://tdrbot.github.io/blogs">Check it out!</a>
       <hr>
       <br>
       <h2>USER AD</h2>
@@ -52,7 +52,7 @@
       <br>
       <a href="https://tdrp-game-files.netlify.app/website/adform">Submit an ad here!</a>
       <details id="ad-data">
-        <summary>View ad data.</summary>
+        <summary>View ad data. (Advanced)</summary>
         <textarea disabled id="ad-data-preview" style="width:80%; height:200px; white-space: nowrap;"></textarea>
       </details>
       <br>
@@ -153,9 +153,9 @@
       }
 
       function getAdDur() {
-        ad_duration = getCookie("adfreq");
+        ad_duration = window.localStorage.getItem("adfreq");
         if (ad_duration == "") {
-          setCookie("adfreq", 5000, 730);
+          window.localStorage.getItem("adfreq", 5000, 730);
           ad_duration = 5000
         }
         setInterval(updateads, parseInt(ad_duration));
@@ -179,7 +179,7 @@
       window.onload = checkName()
 
       function checkName() {
-        let username = getCookie("username");
+        let username = window.localStorage.getItem("username");
 
         if (username != "") {
           document.getElementById("header-main").textContent = "Welcome back, " + username + "!";
@@ -192,11 +192,11 @@
         document.getElementById("name-notif").style.display = "block";
       }
 
-      if (getCookie("addatadisplay") == "") {
-        setCookie("addatadisplay", false, 730);
+      if (window.localStorage.getItem("addatadisplay") == "") {
+        window.localStorage.getItem("addatadisplay", false, 730);
       }
       
-      if (getCookie("addatadisplay") == "true") {
+      if (window.localStorage.getItem("addatadisplay") == "true") {
         document.getElementById("ad-data").setAttribute("open", "open")
       }
     </script>

@@ -51,27 +51,27 @@
       <br>
       <br>
       <script>
-        document.getElementById("name-input").value = getCookie("username");
-        document.getElementById("ad-duration").value = getCookie("adfreq");
-        if (getCookie("addatadisplay") == "true") {
+        document.getElementById("name-input").value = window.localStorage.getItem("username");
+        document.getElementById("ad-duration").value = window.localStorage.getItem("adfreq");
+        if (window.localStorage.getItem("addatadisplay") == "true") {
           document.getElementById("show-ad-data").checked = true;
         }
 
         function setName() {
             let name = document.getElementById("name-input").value;
-            setCookie("username", name, 730);
+            window.localStorage.setItem("username", name);
             window.location.href = "https://tdrbot.github.io?msgbox=namechange";
         }
 
         function setDuration() {
           let duration = document.getElementById("ad-duration").value;
-          setCookie("adfreq", duration, 730);
+          window.localStorage.setItem("adfreq", duration);
           window.location.href = "https://tdrbot.github.io/settings?msgbox=setdur";
         }
 
         function displayAdData() {
           let doaddata = document.getElementById("show-ad-data").checked;
-          setCookie("addatadisplay", doaddata, 730);
+          window.localStorage.setItem("addatadisplay", doaddata)
           window.location.href = "https://tdrbot.github.io/settings?msgbox=showdata";
         }
 
