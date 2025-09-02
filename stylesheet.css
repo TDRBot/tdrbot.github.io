@@ -278,3 +278,12 @@ body::-webkit-scrollbar-thumb {
    from { background-position-x: 0%; background-position-y: 0% }
    to {background-position-x: 2500%; background-position-y: 2500%}
 }
+
+.code-container {
+  font-family: Determination, monospace;
+}
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
