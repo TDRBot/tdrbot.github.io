@@ -44,7 +44,7 @@
       <hr>
       <h2>HTML Sandbox (Beta)</h2>
       <p>Test out HTML without actually publishing it!</p>
-      <a href="https://tdrbot.github.io/projects/cube-race" id="beta-content-1">Go here</a>
+      <a href="https://tdrbot.github.io/projects/html-sandbox/edit" id="beta-content-1">Go here</a>
       <hr>
       <br>
       <br>
@@ -58,7 +58,7 @@
   <script>
     let is_beta = window.localStorage.getItem("betafeatures");
 
-    if (isbeta != "true") {
+    if (is_beta != "true") {
       document.getElementById("beta-content-1").style.display = none;
     }
   </script>
