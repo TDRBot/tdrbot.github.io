@@ -121,6 +121,7 @@
     let username = window.localStorage.getItem("username");
     let ad_duration = window.localStorage.getItem("adfreq");
     let addatadisplay = window.localStorage.getItem("addatadisplay");
+    let betafeatures= window.localStorage.getItem("betafeatures");
 
     window.onload = getAdDur();
 
@@ -203,6 +204,10 @@
       
       if (addatadisplay == "true") {
         document.getElementById("ad-data").setAttribute("open", "open")
+      }
+
+      if (betafeatures == null) {
+        window.localStorage.setItem("betafeatures", "false");
       }
     </script>
 </body>

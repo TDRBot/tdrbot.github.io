@@ -10,11 +10,18 @@
   </head>
   <body>
     <div style="position: fixed; float: right;">
+      <!-- AD DURATION NOTIFICATION -->
       <div id="duration-change" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
         <p>Successfully changed ad duration!</p>
       </div>
+      <!-- ALWAYS SHOW AD DATA NOTIFICATION -->
       <div id="ad-data-display-notif" style="border-left: yellow solid 10px;background: #ffffa3;color: black;text-align: left;padding: 5px;display: none;">
         <p>Successfully changed ad data display!</p>
+      </div>
+      <!-- BETA FEATURE NOTIFICATION -->
+      <div id="beta-feature-warn" style="border-left: rgb(255, 0, 0) solid 10px;background: #ffa3a3;color: black;text-align: left;padding: 5px;display: none;">
+        <p>Warning! You've enabled beta features on my website.</p>
+        <p>This means, you're enabling features that may not be ready<br>for a stable release! You <b>must</b> be aware that<br>there may be bugs...</p>
       </div>
     </div>
   <center>
@@ -45,24 +52,31 @@
       <label for="autodisplayads">Automatically Display Ad Data</label>
       <input type="checkbox" name="autodisplayads" id="show-ad-data" onchange="displayAdData()">
       <hr>
+      <h3>Advanced Settings</h3>
+      <label for="beta-features">Beta Features:</label>
+      <input type="checkbox" name="beta-features" id="enable-beta-features">
       <br>
       <br>
       <br>
       <br>
       <br>
       <script>
+        // SET VALUES AND SHIT
         document.getElementById("name-input").value = window.localStorage.getItem("username");
         document.getElementById("ad-duration").value = window.localStorage.getItem("adfreq");
-        if (window.localStorage.getItem("addatadisplay") == "true") {
-          document.getElementById("show-ad-data").checked = true;
+
+        if (window.localStorage.getItem("betafeatures") == "true") {
+          document.getElementById("enable-beta-features").checked = true;
         }
 
+        // ENABLE SETTINGS AND STUFF
         function setName() {
             let name = document.getElementById("name-input").value;
             window.localStorage.setItem("username", name);
             window.location.href = "https://tdrbot.github.io?msgbox=namechange";
         }
 
+        // SHOW MESSAGE BOXES AND SHIT
         function setDuration() {
           let duration = document.getElementById("ad-duration").value;
           window.localStorage.setItem("adfreq", duration);
@@ -75,12 +89,22 @@
           window.location.href = "https://tdrbot.github.io/settings?msgbox=showdata";
         }
 
+        function betaFeatures() {
+          let enable_beta = document.getElementById("enable-beta-features").checked;
+          window.localStorage.setItem("betafeatures", enable_beta)
+          window.location.href = "https://tdrbot.github.io/settings?msgbox=betawarn";
+        }
+
         if (parameters.has('msgbox') && parameters.get("msgbox") == "setdur") {
           document.getElementById("duration-change").style.display = "block";
         }
 
         if (parameters.has('msgbox') && parameters.get("msgbox") == "showdata") {
           document.getElementById("ad-data-display-notif").style.display = "block";
+        }
+
+        if (parameters.has('msgbox') && parameters.get("msgbox") == "betawarn") {
+          document.getElementById("beta-feature-warn").style.display = "block";
         }
       </script>
     </div>
