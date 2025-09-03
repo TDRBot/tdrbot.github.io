@@ -34,3 +34,44 @@ function getCookie(cname) {
 ////////////////////////////////////////////////////////////////
 
 let parameters = new URLSearchParams(document.location.search);
+
+////////////////////////////////////////////////////////////////
+//
+// CUSTOM EMOJIS
+//
+////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+  function replaceEmojis(root = document.body) {
+    const emojiMap = {
+      ":pippins_jump:": "emoji-pippins-jump",
+      // add more here like ":another:": "emoji-another"
+    };
+
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+
+    let node;
+    while ((node = walker.nextNode())) {
+      let text = node.nodeValue;
+
+      for (const [emojiText, className] of Object.entries(emojiMap)) {
+        if (text.includes(emojiText)) {
+          const parts = text.split(emojiText);
+          const fragment = document.createDocumentFragment();
+
+          parts.forEach((part, i) => {
+            if (part) fragment.appendChild(document.createTextNode(part));
+            if (i < parts.length - 1) {
+              const span = document.createElement("span");
+              span.className = className;
+              fragment.appendChild(span);
+            }
+          });
+
+          node.parentNode.replaceChild(fragment, node);
+        }
+      }
+    }
+  }
+
+  replaceEmojis();
+});
