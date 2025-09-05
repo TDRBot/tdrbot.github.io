@@ -33,6 +33,6 @@ if (window.location.href.toLowerCase().includes("view")) {
 
 // SAVING AND GOING TO WEBSITE
 function saveAndView() {
-    window.localStorage.setItem("website_info", codebox_content);
+    window.localStorage.setItem("sandbox-website", codebox_content);
     window.location.href = "https://tdrbot.github.io/projects/html-sandbox/view";
 }
