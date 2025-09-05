@@ -26,7 +26,8 @@ function loadFallback() {
 
 // LOAD WEBSITE IF ON VIEW SITE
 if (window.location.href.toLowerCase().includes("view")) {
-    document.write("website_info");
+    print("Loaded website!");
+    document.write(website_info);
 }
 
 
