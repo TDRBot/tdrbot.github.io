@@ -12,11 +12,15 @@ if (window.location.href.toLowerCase().includes("edit")) {
 if (website_info == null) {
     loadFallback();
 } else {
-    document.getElementById("codebox").innerText = website_info;
+    if (window.location.href.toLowerCase().includes("edit")) {
+        document.getElementById("codebox").innerText = website_info;
+    }
 }
 
 function loadFallback() {
-    document.getElementById("codebox").innerText = fallback_website;
+    if (window.location.href.toLowerCase().includes("edit")) {
+        document.getElementById("codebox").innerText = fallback_website;
+    }
     window.localStorage.setItem("sandbox-website", fallback_website);
 }
 
