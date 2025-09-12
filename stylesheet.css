@@ -288,10 +288,12 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
+/*/ CUSTOM EMOJIS /*/
 .emoji-pippins-jump {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 33px;
+  height: 42px;
   background: url("https://tdrbot.github.io/images/emojis/pippins_jump.gif") center/contain no-repeat;
   vertical-align: middle;
 }
+/*/ CUSTOM EMOJIS /*/

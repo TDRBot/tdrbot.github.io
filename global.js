@@ -40,38 +40,53 @@ let parameters = new URLSearchParams(document.location.search);
 // CUSTOM EMOJIS
 //
 ////////////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", () => {
-  function replaceEmojis(root = document.body) {
-    const emojiMap = {
-      ":pippins_jump:": "emoji-pippins-jump",
-      // add more here like ":another:": "emoji-another"
-    };
+var emojiMap = {
+  ":pippins_jump:": "emoji-pippins-jump",
+  // add more as needed
+};
 
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+function replaceCustomEmojis(container = document.body) {
+  let emojiKeys = Object.keys(emojiMap);
+  if (emojiKeys.length === 0) return;
 
-    let node;
-    while ((node = walker.nextNode())) {
-      let text = node.nodeValue;
+  let regex = new RegExp(
+    emojiKeys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join("|"),
+    "g"
+  );
 
-      for (const [emojiText, className] of Object.entries(emojiMap)) {
-        if (text.includes(emojiText)) {
-          const parts = text.split(emojiText);
-          const fragment = document.createDocumentFragment();
+  let walker = document.createTreeWalker(
+    container,
+    NodeFilter.SHOW_TEXT,
+    null,
+    false
+  );
 
-          parts.forEach((part, i) => {
-            if (part) fragment.appendChild(document.createTextNode(part));
-            if (i < parts.length - 1) {
-              const span = document.createElement("span");
-              span.className = className;
-              fragment.appendChild(span);
-            }
-          });
+  let node;
+  while ((node = walker.nextNode())) {
+    let matches = node.nodeValue.match(regex);
+    if (!matches) continue;
 
-          node.parentNode.replaceChild(fragment, node);
-        }
+    let frag = document.createDocumentFragment();
+    let parts = node.nodeValue.split(regex);
+
+    parts.forEach((part, i) => {
+      frag.appendChild(document.createTextNode(part));
+
+      let emojiCode = matches[i];
+      if (emojiCode) {
+        let span = document.createElement("span");
+        span.className = emojiMap[emojiCode];
+        span.setAttribute("data-emoji", emojiCode); // optional
+        frag.appendChild(span);
       }
-    }
-  }
+    });
 
-  replaceEmojis();
+    node.parentNode.replaceChild(frag, node);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  replaceCustomEmojis();
 });
+
+function to_i(str) { return parseInt(str, 10); }
