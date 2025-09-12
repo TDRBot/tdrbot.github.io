@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       banner.src = "https://tdrbot.github.io/images/main/WelcomeBanner-old.png";
     else
       banner = document.querySelector('img[src="images/main/WelcomeBanner.png"]');
-      banner.src = "images/main/WelcomeBanner-old.png";
+      banner.src = "https://tdrbot.github.io/images/main/WelcomeBanner-old.png";
   }
 });
 
