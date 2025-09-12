@@ -42,9 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (container) container.classList.add("container-classic");
 
     let banner;
-    
+
+    document.querySelector('img[src="https://tdrbot.github.io/images/main/WelcomeBanner.png"]');
+
     if (banner != null)
-      banner.src = "https://tdrbot.github.io/images/main/WelcomeBanner.png";
+      banner.src = "https://tdrbot.github.io/images/main/WelcomeBanner-old.png";
     else
       banner = document.querySelector('img[src="images/main/WelcomeBanner.png"]');
       banner.src = "images/main/WelcomeBanner-old.png";
