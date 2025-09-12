@@ -296,4 +296,30 @@ body::-webkit-scrollbar-thumb {
   background: url("https://tdrbot.github.io/images/emojis/pippins_jump.gif") center/contain no-repeat;
   vertical-align: middle;
 }
+
+.emoji-kris-idle {
+  display: inline-block;
+  width: 36px;
+  height: 38px;
+  background: url("https://tdrbot.github.io/images/emojis/kris_battle_idle.gif") center/contain no-repeat;
+  vertical-align: middle;
+}
+
+.emoji-ralsei-float {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url("https://tdrbot.github.io/images/emojis/ralsei_fly_cute.gif") center/contain no-repeat;
+  vertical-align: middle;
+}
 /*/ CUSTOM EMOJIS /*/
+
+/*/ THEME COLORS /*/
+/*/ MIDNIGHT DARK /*/
+.container-midnight {
+  background: #1f1c49;
+}
+
+.sitebg-midnight {
+  background: url('https://tdrbot.github.io/images/main/SiteBG_Midnight.png');
+}

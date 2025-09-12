@@ -1,5 +1,13 @@
 ////////////////////////////////////////////////////////////////
 //
+// variables
+//
+////////////////////////////////////////////////////////////////
+
+let body = document.getElementsByTagName("body");
+
+////////////////////////////////////////////////////////////////
+//
 // COOKIE LOGIC
 //
 ////////////////////////////////////////////////////////////////
@@ -42,6 +50,8 @@ let parameters = new URLSearchParams(document.location.search);
 ////////////////////////////////////////////////////////////////
 var emojiMap = {
   ":pippins_jump:": "emoji-pippins-jump",
+  ":kris_idle:": "emoji-pippins-jump",
+  ":ralsei_float:": "emoji-ralsei-float",
   // add more as needed
 };
 
@@ -90,3 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function to_i(str) { return parseInt(str, 10); }
+
+////////////////////////////////////////////////////////////////
+//
+// THEMES
+//
+////////////////////////////////////////////////////////////////
+
+let theme = document.window.localStorage.getItem("site-theme");
+
+if (theme == "midnight") {
+  let container = document.getElementsByClassName("container")[0];
+  body[0].classList.add("sitebg-midnight");
+  container.classList.add("container-midnight");
+}

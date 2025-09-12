@@ -52,6 +52,11 @@
       <label for="autodisplayads">Automatically Display Ad Data</label>
       <input type="checkbox" name="autodisplayads" id="show-ad-data" onchange="displayAdData()">
       <hr>
+      <h3>Themes</h3>
+      <span>Dark Mode (Default)</span> <button>Apply</button>
+      <br>
+      <span>Midnight Blue</span> <button>Apply</button>
+      <hr>
       <h3>Advanced Settings</h3>
       <label for="beta-features">Beta Features:</label>
       <input type="checkbox" name="beta-features" id="enable-beta-features" onchange="betaFeatures()">
@@ -106,6 +111,17 @@
 
         if (parameters.has('msgbox') && parameters.get("msgbox") == "betawarn") {
           document.getElementById("beta-feature-warn").style.display = "block";
+        }
+
+
+        function normalTheme() {
+          window.localStorage.setItem("site-theme", null);
+          window.location.href = "https://tdrbot.github.io/settings";
+        }
+
+        function midnightTheme() {
+          window.localStorage.setItem("site-theme", "midnight");
+          window.location.href = "https://tdrbot.github.io/settings";
         }
       </script>
     </div>
