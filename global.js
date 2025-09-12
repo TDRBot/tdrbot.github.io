@@ -4,7 +4,7 @@
 //
 ////////////////////////////////////////////////////////////////
 
-let body = document.getElementsByTagName("body");
+let body = document.getElementsByTagName("body")[0];
 
 ////////////////////////////////////////////////////////////////
 //
@@ -111,6 +111,6 @@ let theme = window.localStorage.getItem("site-theme");
 
 if (theme == "midnight") {
   let container = document.getElementsByClassName("container")[0];
-  body[0].classList.add("sitebg-midnight");
+  body.classList.add("sitebg-midnight");
   container.classList.add("container-midnight");
 }
