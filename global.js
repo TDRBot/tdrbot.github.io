@@ -107,7 +107,7 @@ function to_i(str) { return parseInt(str, 10); }
 //
 ////////////////////////////////////////////////////////////////
 
-let theme = document.window.localStorage.getItem("site-theme");
+let theme = window.localStorage.getItem("site-theme");
 
 if (theme == "midnight") {
   let container = document.getElementsByClassName("container")[0];
