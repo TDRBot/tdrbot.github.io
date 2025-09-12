@@ -352,4 +352,16 @@ body::-webkit-scrollbar-thumb {
   border: solid 3px white;
   color: white;
 }
+
+/*/ CLASSIC THEME /*/
+
+.sitebg-classic {
+  background: url("https://tdrbot.github.io/old-site/background.png");
+}
+
+.container-classic {
+  background: none;
+  border: none;
+}
+
 /*/ THEME COLORS /*/

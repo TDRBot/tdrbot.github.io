@@ -63,6 +63,9 @@
         <li>
           <span>Pitch Black</span> <button onclick="darknessTheme()">Apply</button>
         </li>
+        <li>
+          <span>Classic</span> <button onclick="classicTheme()">Apply</button>
+        </li>
       </ul>
       <hr>
       <h3>Advanced Settings</h3>
@@ -134,6 +137,11 @@
 
         function darknessTheme() {
           window.localStorage.setItem("site-theme", "darkness");
+          window.location.href = "https://tdrbot.github.io/settings";
+        }
+        
+        function classicTheme() {
+          window.localStorage.setItem("site-theme", "classic");
           window.location.href = "https://tdrbot.github.io/settings";
         }
       </script>
