@@ -325,12 +325,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sitebg-midnight button {
-  outline: solid 3px rgb(19, 7, 87);
+  border: solid 3px rgb(19, 7, 87);
   color: rgb(19, 7, 87);
 }
 
 .sitebg-midnight button:hover {
-  outline: solid 3px rgb(7, 35, 158);
+  border: solid 3px rgb(7, 35, 158);
   color: rgb(7, 35, 158);
 }
 
@@ -344,12 +344,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sitebg-darkness button {
-  outline: solid 3px grey;
+  border: solid 3px grey;
   color: grey;
 }
 
 .sitebg-darkness button:hover {
-  outline: solid 3px white;
+  border: solid 3px white;
   color: white;
 }
 /*/ THEME COLORS /*/
