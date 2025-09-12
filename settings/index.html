@@ -53,13 +53,17 @@
       <input type="checkbox" name="autodisplayads" id="show-ad-data" onchange="displayAdData()">
       <hr>
       <h3>Themes</h3>
-      <ul>
-      <li>
-        <span>Dark Mode (Default)</span> <button onclick="normalTheme()">Apply</button>
-      </li>
-      <li>
-        <span>Midnight Blue</span> <button onclick="midnightTheme()">Apply</button>
-      </li>
+      <ul style="text-align: left;">
+        <li>
+          <span>Dark Mode (Default)</span> <button onclick="normalTheme()">Apply</button>
+        </li>
+        <li>
+          <span>Midnight Blue</span> <button onclick="midnightTheme()">Apply</button>
+        </li>
+        <li>
+          <span>Pitch Black</span> <button onclick="darknessTheme()">Apply</button>
+        </li>
+      </ul>
       <hr>
       <h3>Advanced Settings</h3>
       <label for="beta-features">Beta Features:</label>
@@ -125,6 +129,11 @@
 
         function midnightTheme() {
           window.localStorage.setItem("site-theme", "midnight");
+          window.location.href = "https://tdrbot.github.io/settings";
+        }
+
+        function darknessTheme() {
+          window.localStorage.setItem("site-theme", "darkness");
           window.location.href = "https://tdrbot.github.io/settings";
         }
       </script>

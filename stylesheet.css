@@ -323,3 +323,33 @@ body::-webkit-scrollbar-thumb {
 .sitebg-midnight {
   background: url('https://tdrbot.github.io/images/main/SiteBG_Midnight.png');
 }
+
+.sitebg-midnight button {
+  outline: solid 3px rgb(19, 7, 87);
+  color: rgb(19, 7, 87);
+}
+
+.sitebg-midnight button:hover {
+  outline: solid 3px rgb(7, 35, 158);
+  color: rgb(7, 35, 158);
+}
+
+/*/ PITCH BLACK /*/
+.sitebg-darkness {
+  background: black;
+}
+
+.container-darkness {
+  background: #000000;
+}
+
+.sitebg-darkness button {
+  outline: solid 3px grey;
+  color: grey;
+}
+
+.sitebg-darkness button:hover {
+  outline: solid 3px white;
+  color: white;
+}
+/*/ THEME COLORS /*/

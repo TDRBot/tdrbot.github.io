@@ -14,11 +14,23 @@
 let theme = window.localStorage.getItem("site-theme");
 
 document.addEventListener("DOMContentLoaded", () => {
+  ///////////////////////////////////////
+  // MIDNIGHT THEME
+  ///////////////////////////////////////
   if (theme == "midnight") {
     let body = document.getElementsByTagName("body")[0];
     let container = document.getElementsByClassName("container")[0];
     body.classList.add("sitebg-midnight");
     if (container) container.classList.add("container-midnight");
+  }
+  ///////////////////////////////////////
+  // PITCH BLACK THEME
+  ///////////////////////////////////////
+  if (theme == "darkness") {
+    let body = document.getElementsByTagName("body")[0];
+    let container = document.getElementsByClassName("container")[0];
+    body.classList.add("sitebg-darkness");
+    if (container) container.classList.add("container-darkness");
   }
 });
 
