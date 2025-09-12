@@ -28,7 +28,7 @@ body {
 }
 
 .tenna {
-  background-image: url("https://tdrbot.github.io/images/tennabg.gif");
+  background-image: url("https://tdrbot.github.io/images/tennabg.gif") !important;
   animation: bgfly 500s infinite cubic-bezier(.23,.19,.72,.77);
 }
 
