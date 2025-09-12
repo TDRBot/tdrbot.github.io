@@ -53,9 +53,13 @@
       <input type="checkbox" name="autodisplayads" id="show-ad-data" onchange="displayAdData()">
       <hr>
       <h3>Themes</h3>
-      <span>Dark Mode (Default)</span> <button>Apply</button>
-      <br>
-      <span>Midnight Blue</span> <button>Apply</button>
+      <ul>
+      <li>
+        <span>Dark Mode (Default)</span> <button onclick="normalTheme()">Apply</button>
+      </li>
+      <li>
+        <span>Midnight Blue</span> <button onclick="midnightTheme()">Apply</button>
+      </li>
       <hr>
       <h3>Advanced Settings</h3>
       <label for="beta-features">Beta Features:</label>
