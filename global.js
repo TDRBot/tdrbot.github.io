@@ -109,12 +109,14 @@ function to_i(str) { return parseInt(str, 10); }
 
 let theme = window.localStorage.getItem("site-theme");
 
-if (theme == "midnight") {
-  let body = document.getElementsByTagName("body")[0];
-  let container = document.getElementsByClassName("container")[0];
-  body.classList.add("sitebg-midnight");
-  container.classList.add("container-midnight");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  if (theme == "midnight") {
+    let body = document.getElementsByTagName("body")[0];
+    let container = document.getElementsByClassName("container")[0];
+    body.classList.add("sitebg-midnight");
+    if (container) container.classList.add("container-midnight");
+  }
+});
 
 ////////////////////////////////////////////////////////////////
 //
