@@ -373,7 +373,8 @@ body::-webkit-scrollbar-thumb {
 
 .container-deltarune {
   border: 10px solid transparent;
-  border-image: url("https://tdrbot.github.io/images/DeltaruneBox_Form.png") 28 round;
+  background: black;
+  border-image: url("https://tdrbot.github.io/images/DeltaruneBox_form.png") 28 round;
 }
 
 /*/ THEME COLORS /*/
