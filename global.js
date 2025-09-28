@@ -103,6 +103,7 @@ var emojiMap = {
   ":pippins_jump:": "emoji-pippins-jump",
   ":kris_idle:": "emoji-pippins-jump",
   ":ralsei_float:": "emoji-ralsei-float",
+  ":warning:": "warning-icon",
   // add more as needed
 };
 

@@ -312,6 +312,14 @@ body::-webkit-scrollbar-thumb {
   background: url("https://tdrbot.github.io/images/emojis/ralsei_fly_cute.gif") center/contain no-repeat;
   vertical-align: middle;
 }
+
+.warning-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("https://tdrbot.github.io/images/emojis/warning-icon.png") center/contain no-repeat;
+  vertical-align: middle;
+}
 /*/ CUSTOM EMOJIS /*/
 
 /*/ THEME COLORS /*/
@@ -372,7 +380,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container-deltarune {
-  border: 10px solid transparent;
+  border: 50px solid transparent;
   background: black;
   border-image: url("https://tdrbot.github.io/images/DeltaruneBox_form.png") 28 round;
 }
