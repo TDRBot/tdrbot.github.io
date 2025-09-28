@@ -364,4 +364,16 @@ body::-webkit-scrollbar-thumb {
   border: none;
 }
 
+/*/ DELTARUNE THEME /*/
+
+.sitebg-deltarune {
+  background: url("https://tdrbot.github.io/images/DeltaruneBattle_BG.gif");
+  font-family: Determination;
+}
+
+.container-deltarune {
+  border: 10px solid transparent;
+  border-image: url("https://tdrbot.github.io/images/DeltaruneBox_Form.png") 28 round;
+}
+
 /*/ THEME COLORS /*/

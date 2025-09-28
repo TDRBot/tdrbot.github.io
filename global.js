@@ -45,6 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     banner.src = "https://tdrbot.github.io/images/main/WelcomeBanner-old.png";
   }
+  ///////////////////////////////////////
+  // DELTARUNE THEME
+  ///////////////////////////////////////
+  if (theme == "deltarune") {
+    let body = document.getElementsByTagName("body")[0];
+    let container = document.getElementsByClassName("container")[0];
+    body.classList.add("sitebg-deltarune");
+    if (container) container.classList.add("container-deltarune");
+  }
 });
 
 

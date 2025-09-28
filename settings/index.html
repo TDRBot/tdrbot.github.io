@@ -66,6 +66,9 @@
         <li>
           <span>Classic</span> <button onclick="classicTheme()">Apply</button>
         </li>
+        <li>
+          <span>Deltarune</span> <button onclick="deltaruneTheme()">Apply</button>
+        </li>
       </ul>
       <hr>
       <h3>Advanced Settings</h3>
@@ -142,6 +145,11 @@
         
         function classicTheme() {
           window.localStorage.setItem("site-theme", "classic");
+          window.location.href = "https://tdrbot.github.io/settings";
+        }
+
+        function deltaruneTheme() {
+          window.localStorage.setItem("site-theme", "deltarune");
           window.location.href = "https://tdrbot.github.io/settings";
         }
       </script>
