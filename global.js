@@ -162,3 +162,30 @@ function to_i(str) { return parseInt(str, 10); }
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+////////////////////////////////////////////////////////////////
+//
+// GET BROWSER FUNCTION
+//
+////////////////////////////////////////////////////////////////
+
+function detectBrowser() {
+  let userAgent = navigator.userAgent;
+  let browserName = "Unknown";
+
+  if (userAgent.includes("Chrome") && !userAgent.includes("Edg")) {
+    browserName = "Chrome";
+  } else if (userAgent.includes("Firefox")) {
+    browserName = "Firefox";
+  } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+    browserName = "Safari";
+  } else if (userAgent.includes("Edg")) {
+    browserName = "Edge";
+  } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+    browserName = "Opera";
+  } else if (userAgent.includes("MSIE") || userAgent.includes("Trident")) {
+    browserName = "Internet Explorer";
+  }
+
+  return browserName;
+}
