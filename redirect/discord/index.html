@@ -10,7 +10,13 @@
   <body>
     <span>You're being redirected to TDRP's Discord! Taking too long? Use this link: </span> <a href="https://discord.gg/GbNJgpJje8">Discord</a>
     <script>
-      window.location.href = "https://discord.gg/GbNJgpJje8";
+      let parameters = new URLSearchParams(document.location.search);
+
+      if (parameters.has('redirect') && parameters.get("redirect") == "no") {
+        console.log("no redirect :)")
+      } else {
+        window.location.href = "https://discord.gg/GbNJgpJje8";
+      }
     </script>
   </body>
 </html>
