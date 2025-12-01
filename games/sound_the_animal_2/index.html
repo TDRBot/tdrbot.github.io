@@ -1,0 +1,12 @@
+<script type="module">
+  import { Nostalgist } from "https://unpkg.com/nostalgist?module";
+
+  const emu = await Nostalgist.prepare({
+    core: "genesis_plus_gx",
+    rom: "https://tdrbot.github.io/games/sound_the_animal_2/sound2.bin",
+  });
+
+  document.addEventListener("click", async () => {
+    await emu.start();
+  });
+</script>
