@@ -1,4 +1,0 @@
-DBROWSER (BETA)
-Simple web viewer.
-
-2024 © TDRP
