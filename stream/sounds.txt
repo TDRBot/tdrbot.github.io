@@ -1,5 +1,17 @@
-?sounds
+############################
+#
+# * GENERAL COMMANDS
+#
+############################
+!sounds
+
+############################
+#
+# * SOUND COMMANDS
+#
+############################
 !anything
+!applause
 !bark
 !escape
 !byebye
@@ -14,21 +26,38 @@
 !carhonk
 !iceshock
 !jevillaugh
-!knight
+!krisphone
 !icekey
 !kinglaugh
 !lancerlaugh
 !long
-!fountain
 !mantle
+!moss
+!mymeow
 !meow
+!music
+!musicbetter
 !neochaos
+!petrify
+!plueymeow
 !queenlaugh
-!dontforget
-!snowgrave
+!rocket
 !spamlaugh
 !spamneolaugh
 !splat
 !jackenstein
 !tenna
-!thornring
+!tvroom
+!tomfoolery
+!weirdroute
+!noweirdroute
+
+############################
+#
+# * LONG SOUND COMMANDS
+#
+############################
+!fountain (10 minute cooldown)
+!dontforget
+!knight (1 minute cooldown)
+!thornring (10 minute cooldown)
