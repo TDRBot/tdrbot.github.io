@@ -6,6 +6,7 @@ So, in order to search through all the categories, or find a specific
 one, press CTRL + F (or ⌘ + F) and type any category.
 
 - GENERAL COMMANDS
+- CHANNEL POINTS
 - SOUND COMMANDS
 - LONG SOUND COMMANDS
 - EXCLUSIVE SOUND COMMANDS
@@ -24,6 +25,18 @@ mentioned above.
 #
 ############################
 !sounds
+
+############################
+#
+# * CHANNEL POINTS
+#
+############################
+!points
+!ivycomb-pts (Costs 50 points)
+!kris-pts (Costs 50 points)
+!knight-pts (Costs 100 points)
+!rouxls-pts (Costs 100 points)
+/\ Can also be !roulxs-pts incase you do a typo
 
 ############################
 #
