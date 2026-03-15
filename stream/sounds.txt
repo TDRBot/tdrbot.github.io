@@ -1,4 +1,22 @@
 ############################
+# * HELP
+############################
+Look, it make take a while to find what you're looking for!
+So, in order to search through all the categories, or find a specific
+one, press CTRL + F (or ⌘ + F) and type any category.
+
+- GENERAL COMMANDS
+- SOUND COMMANDS
+- LONG SOUND COMMANDS
+- EXCLUSIVE SOUND COMMANDS
+- MUSIC COMMANDS
+
+On mobile, press the three dots (usually at the top left or right), and
+look for a 'Find in page' or similar option, and type any category
+mentioned above.
+
+
+############################
 #
 # * GENERAL COMMANDS
 #
@@ -94,3 +112,4 @@
 !music-tvtime (3 minute cooldown)
 !music-rouxlsbattle (3 minute cooldown)
 !music-rouxls (35 second cooldown)
+!music-asgoretruck (1 minute cooldown)
