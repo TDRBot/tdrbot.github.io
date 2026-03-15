@@ -10,6 +10,8 @@ one, press CTRL + F (or ⌘ + F) and type any category.
 - LONG SOUND COMMANDS
 - EXCLUSIVE SOUND COMMANDS
 - MUSIC COMMANDS
+- MARIO VOICELINES
+- BALDI VOICELINES
 
 On mobile, press the three dots (usually at the top left or right), and
 look for a 'Find in page' or similar option, and type any category
@@ -113,3 +115,39 @@ mentioned above.
 !music-rouxlsbattle (3 minute cooldown)
 !music-rouxls (35 second cooldown)
 !music-asgoretruck (1 minute cooldown)
+
+############################
+#
+# * MARIO VOICELINES
+#
+############################
+!mario-herewego
+!mario-letsgo
+!mario-mamamia
+!mario-doh
+!mario-gaybowser
+!mario-laugh
+!mario-hohoo
+!mario-itsame
+!mario-ok
+!mario-oof
+!mario-scream
+!mario-scream2
+!mario-thankyou
+!mario-tired
+!mario-wah
+!mario-whaha
+!mario-woah
+!mario-yah
+!mario-yahoo
+!mario-yippee
+!mario-hello
+!mario-hello
+
+############################
+#
+# * BALDI VOICELINES
+#
+############################
+!baldi-wow
+!baldi-ohh (May be a tad bit loud)
