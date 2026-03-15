@@ -13,6 +13,7 @@
 !anything
 !applause
 !bark
+!bigshot
 !escape
 !byebye
 !caryelp
@@ -21,6 +22,8 @@
 !truck
 !egg
 !explosion
+!fixitfelix
+!faketvtime
 !gersonlaugh
 !gun
 !carhonk
@@ -31,6 +34,7 @@
 !kinglaugh
 !lancerlaugh
 !long
+!noellescream
 !mantle
 !moss
 !mymeow
@@ -41,6 +45,7 @@
 !petrify
 !plueymeow
 !queenlaugh
+!rouxlappear
 !rocket
 !spamlaugh
 !spamneolaugh
@@ -59,5 +64,33 @@
 ############################
 !fountain (10 minute cooldown)
 !dontforget
-!knight (1 minute cooldown)
+!knight (1 minute cooldown per user)
 !thornring (10 minute cooldown)
+!snowgrave (5 minute cooldown)
+
+############################
+#
+# * EXCLUSIVE SOUND COMMANDS
+#
+############################
+
+
+############################
+# * For stream moderators
+############################
+!drippbark
+
+############################
+# * For @jaxon331-pt
+############################
+!jaxonscream
+!jaxonjumpscare
+
+############################
+#
+# * MUSIC COMMANDS
+#
+############################
+!music-tvtime (3 minute cooldown)
+!music-rouxlsbattle (3 minute cooldown)
+!music-rouxls (35 second cooldown)
