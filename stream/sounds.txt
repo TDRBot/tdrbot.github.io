@@ -74,11 +74,11 @@
 #
 ############################
 
-
 ############################
 # * For stream moderators
 ############################
 !drippbark
+!clearsounds // Clears... all currently playing sounds...
 
 ############################
 # * For @jaxon331-pt
