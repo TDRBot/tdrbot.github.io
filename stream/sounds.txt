@@ -25,13 +25,13 @@ mentioned above.
 #
 ############################
 !sounds
+!points - Use to see how many points you have
 
 ############################
 #
 # * CHANNEL POINTS
 #
 ############################
-!points
 !ivycomb-pts (Costs 50 points)
 !kris-pts (Costs 50 points)
 !knight-pts (Costs 100 points)
