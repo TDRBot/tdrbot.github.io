@@ -12,8 +12,6 @@
     <body>
         <p>Taking you around the internet!</p>
         <script>
-            window.onload = randomPage();
-
             let pagePool = [
                 "https://www.youtube.com/watch?v=E7Q6V0D3zZw",
                 "https://tdrbot.github.io/games/tobycollect",
@@ -36,9 +34,12 @@
                 "https://open.spotify.com/artist/57DlMWmbVIf2ssJ8QBpBau?autoplay=true",
                 "https://ynoproject.net/yume/",
             ];
+
             function randomPage() {
                 window.location.href = pagePool[Math.floor(Math.random() * 20)];
             }
+            
+            window.onload = randomPage()
         </script>
     </body>
 </html>
