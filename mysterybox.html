@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Mystery Box!</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Taking you around the internet!</p>
+        <script>
+            window.onload = randomPage();
+
+            let pagePool = [
+                "https://www.youtube.com/watch?v=E7Q6V0D3zZw",
+                "https://tdrbot.github.io/games/tobycollect",
+                "https://www.youtube.com/watch?v=7L7csHK9EjY",
+                "https://deltarune.com",
+                "https://deltarune.com/windows/",
+                "https://deltarune.com/lostwheretheforestwouldgrow/",
+                "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "https://www.youtube.com/watch?v=7L7csHK9EjY",
+                "https://tdrp.newgrounds.com/art",
+                "https://open.spotify.com/artist/12WiIkK6iBWyRefeKpMaKo?autoplay=true",
+                "https://rainworld.miraheze.org/wiki/Inv",
+                "https://deltarune.wiki/w/Tenna",
+                "https://www.fangamer.com/collections/deltarune",
+                "https://www.youtube.com/watch?v=KVqwvU49JLg",
+                "https://en.wikipedia.org/wiki/Rain_World",
+                "https://en.wikipedia.org/wiki/OneShot",
+                "https://tdrbot.github.io/videos/pineapple%20attack.mp4",
+                "https://open.spotify.com/artist/2M1EOE4J6tnaLCfMhE3eFq?autoplay=true",
+                "https://open.spotify.com/artist/57DlMWmbVIf2ssJ8QBpBau?autoplay=true",
+                "https://ynoproject.net/yume/",
+            ];
+            function randomPage() {
+                window.location.href = pagePool[Math.floor(Math.random() * 20)];
+            }
+        </script>
+    </body>
+</html>
